@@ -18,7 +18,8 @@ module.exports = {
     tailwind: path.resolve(__dirname, "../static/js/tailwind"),
     vendors: path.resolve(__dirname, "../static/js/vendors"),
     // theme
-    theme: path.resolve(__dirname, "../static/js/_theme/index.js")
+    theme: path.resolve(__dirname, "../static/js/_theme/index.js"),
+    home_page: path.resolve(__dirname, "../static/js/_theme/pages/home.js")
   },
 
   output: {

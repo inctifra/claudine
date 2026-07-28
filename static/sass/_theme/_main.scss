@@ -6086,14 +6086,14 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 }
 
 /* 21. shipping css here */
-.shipping_area {
-  padding-bottom: 40px;
-}
-@media only screen and (max-width: 767px) {
-  .shipping_area {
-    padding-bottom: 30px;
-  }
-}
+// .shipping_area {
+//   padding-bottom: 40px;
+// }
+// @media only screen and (max-width: 767px) {
+//   .shipping_area {
+//     padding-bottom: 30px;
+//   }
+// }
 
 .single-shipping {
   margin-bottom: 30px;
@@ -6121,9 +6121,10 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 
 /*home three css here*/
 .shipping_two {
-  padding-bottom: 25px;
-  border-bottom: 1px solid #ebebeb;
-  margin-bottom: 80px;
+  padding-bottom: 45px;
+  padding-top: 50px;
+  // border-bottom: 1px solid #ebebeb;
+  // margin-bottom: 80px;
 }
 @media only screen and (max-width: 767px) {
   .shipping_two {

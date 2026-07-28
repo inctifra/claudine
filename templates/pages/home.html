@@ -1,1 +1,117 @@
 {% extends "pages/base.html" %}
+{% load render_bundle from webpack_loader %}
+{% load webpack_static from webpack_loader %}
+
+{% block css %}
+
+{{ block.super }}
+{% render_bundle "home_page" "css"  %}
+
+{% endblock css %}
+
+{% block javascript %}
+
+{{ block.super }}
+{% render_bundle "home_page" "js" attrs="defer" %}
+
+{% endblock javascript %}
+
+{% block main %}
+
+<section class="banner_section_four">
+    <div class="container">
+        <div class="swiper bannerHeroSwiper">
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide">
+                    <div class="single_banner"
+                        data-bgimg="{% webpack_static 'images/hero/v1.webp' %}">
+                        <div class="banner_content">
+                            <p>Handcrafted Collection</p>
+                            <h2>Maasai Inspired Jewelry</h2>
+                            <a href="shop.html">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="single_banner single_two"
+                        data-bgimg="{% webpack_static 'images/hero/v2.webp' %}">
+                        <div class="banner_content">
+                            <p>Made For Every Occasion</p>
+                            <h2>Elegant Handmade Pieces</h2>
+                            <a href="shop.html">Discover</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="single_banner bottom"
+                        data-bgimg="{% webpack_static 'images/hero/v3.webp' %}">
+                        <div class="banner_content">
+                            <p>Student Friendly Prices</p>
+                            <h2>Unique Beaded Accessories</h2>
+                            <a href="shop.html">Explore</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="swiper-pagination"></div>
+
+        </div>
+    </div>
+</section>
+
+<div class="shipping_area shipping_two">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-6">
+                <div class="single-shipping">
+                    <div class="shipping_icone icone_1">
+                    </div>
+                    <div class="shipping_content">
+                        <h3>Free Delivery</h3>
+                        <p>Free Delivery on all order</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="single-shipping">
+                    <div class="shipping_icone icone_2">
+                    </div>
+                    <div class="shipping_content">
+                        <h3>Money Return</h3>
+                        <p>Back guarantee under 7 days</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="single-shipping">
+                    <div class="shipping_icone icone_3">
+                    </div>
+                    <div class="shipping_content">
+                        <h3>Member Discount</h3>
+                        <p>On every order over $120.00</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="single-shipping">
+                    <div class="shipping_icone icone_4">
+                    </div>
+                    <div class="shipping_content">
+                        <h3>Online Support</h3>
+                        <p>Support online 24 hours a day</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock main %}

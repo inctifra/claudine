@@ -12,7 +12,7 @@
     "autoprefixer": "^10.4.21",
     "babel-loader": "^10.0.0",
     "baseline-browser-mapping": "^2.10.33",
-    "bootstrap": "^5.2.3",
+    "bootstrap": "^5.0.2",
     "copy-webpack-plugin": "^13.0.1",
     "css-loader": "^7.1.2",
     "dotenv-webpack": "^8.1.1",
@@ -49,15 +49,19 @@
   },
   "packageManager": "pnpm@10.16.1+sha512.0e155aa2629db8672b49e8475da6226aa4bdea85fdcdfdc15350874946d4f3c91faaf64cbdc4a5d1ab8002f473d5c3fcedcd197989cf0390f9badd3c04678706",
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^7.3.1",
     "@tailwindcss/postcss": "^4.3.0",
+    "animate.css": "^4.1.1",
     "axios": "^1.12.2",
     "css-minimizer-webpack-plugin": "^7.0.2",
     "daisyui": "^5.5.20",
     "dotenv": "^17.2.2",
+    "ionicons": "^2.0.1",
     "jquery": "^3.7.1",
     "mdui": "^2.1.4",
     "tailwindcss": "^4.3.0",
     "terser-webpack-plugin": "^5.3.14",
-    "webpackbar": "^7.0.0"
+    "webpackbar": "^7.0.0",
+    "wowjs": "^1.1.3"
   }
 }

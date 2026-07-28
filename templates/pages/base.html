@@ -1,8 +1,31 @@
 {% extends "base.html" %}
 
+{% load render_bundle from webpack_loader %}
+
+{% block css %}
+{{ block.super }}
+{% render_bundle "theme" "css" %}
+{% endblock css %}
+
+{% block javascript %}
+{{ block.super }}
+{% render_bundle "theme" "js" attrs="defer" %}
+{% endblock javascript %}
+
+
 {% block body %}
-  <div class="min-h-screen flex flex-col">
-    {% block main %}
-    {% endblock main %}
-  </div>
+
+
+{% block header %}
+{% include "pages/components/offcanvas_navbar.html" %}
+{% include "pages/components/header.html" %}
+{% endblock header %}
+
+
+
+{% block footer %}
+
+{% include "pages/components/footer/index.html" %}
+{% endblock footer %}
+
 {% endblock body %}

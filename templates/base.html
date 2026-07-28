@@ -1,0 +1,178 @@
+{% load static i18n %}
+{% load render_bundle from webpack_loader %}
+{% load webpack_static from webpack_loader %}
+
+<!DOCTYPE html>
+{% get_current_language as LANGUAGE_CODE %}
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>
+      {% block title %}
+        Clauwelery | Handmade Knitted Jewelry — Kabarak
+        University
+      {% endblock title %}
+    </title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+    <meta name="description"
+          content="{% block meta_description %}Handmade knitted beads, necklaces, bracelets & ornaments crafted by a Kabarak University student. Hostel delivery available across Nakuru campus. Order via WhatsApp!{% endblock meta_description %}" />
+    <meta name="author" content="Clauwelery" />
+    <meta name="theme-color" content="#be185d" />
+    <meta name="robots" content="index, follow" />
+    {# Open Graph / WhatsApp / Facebook sharing #}
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Clauwelery" />
+    <meta property="og:title"
+          content="{% block og_title %}Clauwelery | Handmade Knitted Jewelry{% endblock og_title %}" />
+    <meta property="og:description"
+          content="{% block og_description %}Handmade knitted beads & jewelry. Campus delivery at Kabarak University, Nakuru.{% endblock og_description %}" />
+    <meta property="og:image"
+          content="{% block og_image %}{% webpack_static 'images/og-default.jpg' %}{% endblock og_image %}" />
+    <meta property="og:url" content="{{ request.build_absolute_uri }}" />
+    <meta property="og:locale" content="en_KE" />
+    {# Twitter / X Cards #}
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title"
+          content="{% block twitter_title %}Clauwelery{% endblock twitter_title %}" />
+    <meta name="twitter:description"
+          content="Handmade knitted jewelry with delivery at Kabarak University." />
+    <meta name="twitter:image"
+          content="{% block twitter_image %}{% webpack_static 'images/og-default.jpg' %}{% endblock twitter_image %}" />
+    {# Favicons #}
+    <link rel="icon"
+          type="image/x-icon"
+          href="{% webpack_static 'images/favicons/favicon.ico' %}" />
+    <link rel="apple-touch-icon"
+          sizes="180x180"
+          href="{% webpack_static 'images/favicons/apple-touch-icon.png' %}" />
+    <link rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="{% webpack_static 'images/favicons/favicon-32x32.png' %}" />
+    <link rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="{% webpack_static 'images/favicons/favicon-16x16.png' %}" />
+    {# Preconnect for faster loading #}
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    {% block css %}
+      <!-- Third-party CSS -->
+      {% render_bundle 'vendors' 'css' %}
+      {% render_bundle 'tailwind' 'css' %}
+      <!-- Project CSS -->
+      {% render_bundle 'project' 'css' %}
+    {% endblock css %}
+    {# Structured Data for Google #}
+    {% block structured_data %}
+      <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          "name": "Clauwelery",
+          "description": "Handmade knitted beads and jewelry by Claudine",
+          "areaServed": {
+            "@type": "CollegeOrUniversity",
+            "name": "Kabarak University",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Nakuru",
+              "addressCountry": "KE"
+            }
+          },
+          "url": "{{ request.build_absolute_uri }}",
+          "priceRange": "$$"
+        }
+      </script>
+    {% endblock structured_data %}
+    {# JavaScript placed at top with defer for faster parsing #}
+    {% block javascript %}
+      {% render_bundle 'vendors' 'js' attrs='defer' %}
+      {% render_bundle 'tailwind' 'js' attrs='defer' %}
+      {% render_bundle 'project' 'js' attrs='defer' %}
+    {% endblock javascript %}
+  </head>
+  <body class="{% block bodyclass %}{% endblock bodyclass %}">
+    {% block body %}
+      <div class="mb-1">
+        <nav class="navbar navbar-expand-md navbar-light bg-light">
+          <div class="container-fluid">
+            <button class="navbar-toggler navbar-toggler-right"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="{% url 'home' %}">claudine</a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="{% url 'home' %}">Home <span class="visually-hidden">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'about' %}">About</a>
+                </li>
+                {% if request.user.is_authenticated %}
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'users:detail' request.user.pk %}">{% translate "My Profile" %}</a>
+                  </li>
+                  <li class="nav-item">
+                    {# URL provided by django-allauth/account/urls.py #}
+                    <a class="nav-link" href="{% url 'account_logout' %}">{% translate "Sign Out" %}</a>
+                  </li>
+                {% else %}
+                  {% if ACCOUNT_ALLOW_REGISTRATION %}
+                    <li class="nav-item">
+                      {# URL provided by django-allauth/account/urls.py #}
+                      <a id="sign-up-link" class="nav-link" href="{% url 'account_signup' %}">{% translate "Sign Up" %}</a>
+                    </li>
+                  {% endif %}
+                  <li class="nav-item">
+                    {# URL provided by django-allauth/account/urls.py #}
+                    <a id="log-in-link" class="nav-link" href="{% url 'account_login' %}">{% translate "Sign In" %}</a>
+                  </li>
+                {% endif %}
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <div class="container">
+        {% if messages %}
+          {% for message in messages %}
+            <div class="alert alert-dismissible {% if message.tags %}alert-{{ message.tags }}{% endif %}">
+              {{ message }}
+              <button type="button"
+                      class="btn-close"
+                      data-bs-dismiss="alert"
+                      aria-label="Close"></button>
+            </div>
+          {% endfor %}
+        {% endif %}
+        {% block main %}
+          {% block content %}
+            <p class="text-4xl text-red-600">Use this document as a way to quick start any new project.</p>
+          {% endblock content %}
+        {% endblock main %}
+      </div>
+    {% endblock body %}
+    <!-- /container -->
+    {% block modal %}
+    {% endblock modal %}
+    {% block inline_javascript %}
+      {%comment %} Script tags with only code, no src (defer by default). To run
+                with a "defer" so that you run inline code:
+                <script>
+                  window.addEventListener("DOMContentLoaded", () => {
+                    /* Run whatever you want */
+                  });
+                </script>
+      {% endcomment %}
+    {% endblock inline_javascript %}
+  </body>
+</html>

@@ -61,7 +61,7 @@ dependencies = [
     "pytest==8.4.1",
     "pytest-sugar==1.0.0",
     "djangorestframework-stubs==3.16.0",
-    "sphinx==8.2.3",
+    "sphinx==9.1.0",
     "sphinx-autobuild==2024.10.3",
     "ruff==0.12.4",
     "coverage==7.9.2",

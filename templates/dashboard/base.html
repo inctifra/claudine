@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% load render_bundle from webpack_loader %}
+{% load webpack_static from webpack_loader %}
+
+{% block css %}
+{{ block.super }}
+{% render_bundle "dashboard" "css" %}
+{% endblock css %}
+
+{% block javascript %}
+{{ block.super }}
+{% render_bundle "dashboard" "js" attrs="defer" %}
+{% endblock javascript %}
+
+
+{% block body %}
+
+
+<div class="page-wrapper">
+
+    {% block header %}{% endblock header %}
+
+    {% block main %}{% endblock main %}
+
+   </div>
+
+    <div class="bottom-space"></div>
+
+{% endblock body %}
+

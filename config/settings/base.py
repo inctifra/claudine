@@ -90,6 +90,7 @@ THIRD_PARTY_APPS = [
     "django_browser_reload",
     "django_filters",
     "bunifu_django_auth",
+    "widget_tweaks",
 ]
 
 LOCAL_APPS = [
@@ -98,6 +99,9 @@ LOCAL_APPS = [
     "apps.catalog",
     "apps.orders",
     "apps.core",
+    "apps.dashboard.vendor",
+    "apps.dashboard.blogger",
+    "apps.dashboard.buyer",
 ]
 # https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
@@ -203,6 +207,9 @@ TEMPLATES = [
                 "django.template.context_processors.tz",
                 "django.contrib.messages.context_processors.messages",
                 "claudine.users.context_processors.allauth_settings",
+            ],
+            "builtins": [
+                "widget_tweaks.templatetags.widget_tweaks",
             ],
         },
     },
@@ -323,11 +330,11 @@ ACCOUNT_ALLOW_REGISTRATION = env.bool("DJANGO_ACCOUNT_ALLOW_REGISTRATION", True)
 # https://docs.allauth.org/en/latest/account/configuration.html
 ACCOUNT_LOGIN_METHODS = {"email"}
 # https://docs.allauth.org/en/latest/account/configuration.html
-ACCOUNT_SIGNUP_FIELDS = ["email*", "password1*", "password2*"]
+ACCOUNT_SIGNUP_FIELDS = ["email*", "password1*", "password2*", "account_type*"]
 # https://docs.allauth.org/en/latest/account/configuration.html
 ACCOUNT_USER_MODEL_USERNAME_FIELD = None
 # https://docs.allauth.org/en/latest/account/configuration.html
-ACCOUNT_EMAIL_VERIFICATION = "mandatory"
+ACCOUNT_EMAIL_VERIFICATION = "none"
 # https://docs.allauth.org/en/latest/account/configuration.html
 ACCOUNT_ADAPTER = "claudine.users.adapters.AccountAdapter"
 # https://docs.allauth.org/en/latest/account/forms.html

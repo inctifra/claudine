@@ -27,6 +27,22 @@
                   <i class="ion-ios-telephone"></i> 0745 547 755
                 </a>
               </li>
+              {% if request.user.is_authenticated %}
+              {% with user=request.user %}
+              <li>
+                <a href="{{user.get_dashboard_url}}" style="color: white">
+                  <i class="ion-ios-dashboard"></i> Dashboard
+                </a>
+              </li>
+              {% endwith %}
+              {% else %}
+
+              <li>
+                <a href="tel:+254745547755" style="color: white">
+                  <i class="ion-ios-telephone"></i> Login
+                </a>
+              </li>
+              {% endif %}
             </ul>
           </div>
         </div>
@@ -152,7 +168,7 @@
                     <a href="#product-list">Shop Beads</a>
                   </li>
                   <li class="{% if request.resolver_match.url_name == 'about' %}active{% endif %}">
-                    <a href="{% url 'about' %}">About</a>
+                    <a href="">About</a>
                   </li>
                   <li>
                     <a href="https://wa.me/254745547755"

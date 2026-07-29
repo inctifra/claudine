@@ -1,0 +1,53 @@
+{% extends "account/base.html" %}
+
+{% load allauth i18n %}
+
+{% block head_title %}
+  {% trans "Signup" %}
+{% endblock head_title %}
+{% block main %}
+  <div class="col-lg-6 col-md-8 col-sm-10">
+    <div class="account_form register">
+      <h2>Create Your Account</h2>
+      <p class="mb-4">
+        Join GlowBeauty to save your favourite products, track your orders, and enjoy a personalized shopping experience.
+      </p>
+      <form action="{{ request.path }}" method="post">
+        {% csrf_token %}
+        <div class="row">
+          <div class="col-md-12 mb-3">
+            <label for="{{ form.email.id_for_label }}">
+              {{ form.email.label }} <span>*</span>
+            </label>
+            {% render_field form.email %}
+            <small>We'll send updates to this email.</small>
+          </div>
+          <div class="col-md-12 mb-3">
+            <label for="{{ form.password1.id_for_label }}">
+              {{ form.password1.label }} <span>*</span>
+            </label>
+            {% render_field form.password1|attr:"placeholder:Enter your password" %}
+            <small>Minimum 8 characters.</small>
+          </div>
+          <div class="col-md-12 mb-3">
+            <label for="{{ form.password2.id_for_label }}">
+              {{ form.password2.label }} <span>*</span>
+            </label>
+            {% render_field form.password2|attr:"placeholder:Confirm your password" %}
+            <small>Re-enter your password.</small>
+          </div>
+        </div>
+        <div class="login_submit d-flex align-items-center flex-md-row flex-column justify-content-between">
+          <button type="submit">Create Account</button>
+          <p class="mt-md-3">
+            Already have an account?
+            <a href="{% url 'account_login' %}">
+              <strong>Sign In</strong>
+            </a>
+          </p>
+        </div>
+         {{ redirect_field }}
+      </form>
+    </div>
+  </div>
+{% endblock main %}

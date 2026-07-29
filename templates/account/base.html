@@ -1,0 +1,12 @@
+{% extends "allauth/layouts/entrance.html" %}
+
+{% block body %}
+  <div class="customer_login d-flex align-items-center justify-content-center min-vh-100">
+    <div class="container">
+      <div class="row justify-content-center">
+        {% block main %}
+        {% endblock main %}
+      </div>
+    </div>
+  </div>
+{% endblock body %}

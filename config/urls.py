@@ -5,19 +5,13 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.urls import include
 from django.urls import path
 from django.views import defaults as default_views
-from django.views.generic import TemplateView
 from drf_spectacular.views import SpectacularSwaggerView
 
 from apps.apis.views import ScalarAPIView
 from config.api_schema import DynamicSpectacularAPIView
 
 urlpatterns = [
-    path("", TemplateView.as_view(template_name="pages/home.html"), name="home"),
-    path(
-        "about/",
-        TemplateView.as_view(template_name="pages/about.html"),
-        name="about",
-    ),
+    path("", include("apps.urls")),
     path(settings.ADMIN_URL, admin.site.urls),
     # User management
     path("users/", include("claudine.users.urls", namespace="users")),

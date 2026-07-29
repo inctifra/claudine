@@ -40,7 +40,8 @@ class UserRedirectView(LoginRequiredMixin, RedirectView):
     permanent = False
 
     def get_redirect_url(self) -> str:
-        return reverse("users:detail", kwargs={"pk": self.request.user.pk})
+        return self.request.user.get_dashboard_url()
 
 
 user_redirect_view = UserRedirectView.as_view()
+

@@ -1,14 +1,21 @@
-{% extends "base.html" %}
+{% extends "pages/base.html" %}
 
+{% load render_bundle from webpack_loader %}
 {% load i18n %}
+{% load allauth account %}
 
 {% block bodyclass %}
-  bg-light
 {% endblock bodyclass %}
 {% block css %}
   {{ block.super }}
+  {% render_bundle "auth" "css" %}
 {% endblock css %}
+{% block javascript %}
+  {{ block.super }}
+  {% render_bundle "auth" "js" attrs="defer" %}
+{% endblock javascript %}
 {% block title %}
+  {{ block.super }}
   {% block head_title %}
     {% trans "Sign In" %}
   {% endblock head_title %}

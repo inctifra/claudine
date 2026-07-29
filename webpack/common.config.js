@@ -19,7 +19,11 @@ module.exports = {
     vendors: path.resolve(__dirname, "../static/js/vendors"),
     // theme
     theme: path.resolve(__dirname, "../static/js/_theme/index.js"),
-    home_page: path.resolve(__dirname, "../static/js/_theme/pages/home.js")
+    home_page: path.resolve(__dirname, "../static/js/_theme/pages/home.js"),
+    auth: path.resolve(__dirname, "../static/js/pages/auth.js"),
+
+    // dashboard related
+    dashboard: path.resolve(__dirname, "../static/js/dashboard/index.js"),
   },
 
   output: {

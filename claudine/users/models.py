@@ -17,12 +17,25 @@ class User(BunifuAbstractUser):
     check forms.SignupForm and forms.SocialSignupForms accordingly.
     """
 
+    class UserAccountType(models.TextChoices):
+        BUYER = "B", "Buyer"
+        VENDOR = "V", "Vendor"
+        BLOGGER = "W", "Blogger"
+
     name = models.CharField(max_length=100, blank=True)
     email = EmailField(_("email address"), unique=True)
     objects: ClassVar[UserManager] = UserManager()
+    account_type = models.CharField(
+        choices=UserAccountType.choices, default=UserAccountType.BUYER, max_length=1,
+    )
+    REQUIRED_FIELDS = ["account_type"]
 
     def get_absolute_url(self) -> str:
         return reverse("users:detail", kwargs={"pk": self.id})
+
+    def get_dashboard_url(self)-> str:
+        account_type_name = self.get_account_type_display().lower()
+        return reverse(f"dashboard:{account_type_name}:home")
 
 
 class Profile(models.Model):

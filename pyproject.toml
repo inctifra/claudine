@@ -78,6 +78,7 @@ dependencies = [
     "djangorestframework-simplejwt>=5.5.1",
     "django-filter>=25.1",
     "bunifu-django-auth>=0.3.4",
+    "django-widget-tweaks>=1.5.1",
 ]
 
 # ==== pytest ====

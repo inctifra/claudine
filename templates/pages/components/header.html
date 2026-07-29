@@ -8,8 +8,7 @@
         <div class="col-lg-7 col-md-12">
           <div class="welcome_text">
             <p class="text-white">
-              Free hostel delivery at
-              <strong>Kabarak University</strong> — Nakuru Campus
+              <strong>Free Delivery</strong> on eligible orders across campuses
             </p>
           </div>
         </div>
@@ -17,17 +16,15 @@
           <div class="top_right text-right">
             <ul>
               <li>
-                <a
-                  href="https://wa.me/254702413456"
-                  target="_blank"
-                  style="color: white"
-                >
+                <a href="https://wa.me/254745547755"
+                   target="_blank"
+                   style="color: white">
                   <i class="ion-social-whatsapp"></i> Order on WhatsApp
                 </a>
               </li>
               <li>
-                <a href="tel:+254702413456" style="color: white">
-                  <i class="ion-ios-telephone"></i> 0702 413 456
+                <a href="tel:+254745547755" style="color: white">
+                  <i class="ion-ios-telephone"></i> 0745 547 755
                 </a>
               </li>
             </ul>
@@ -36,7 +33,6 @@
       </div>
     </div>
   </div>
-
   <!-- Middle: Logo + Search + Cart -->
   <div class="header_middel">
     <div class="container">
@@ -44,88 +40,59 @@
         <div class="col-lg-3 col-md-3 col-4">
           <div class="logo">
             <a href="{% url 'home' %}">
-              <img
-                src="{% webpack_static 'images/logo.png' %}"
-                alt="clauwelery"
-                style="max-height: 30px"
-              />
+              <img src="{% webpack_static 'images/favicons/logo.png' %}"
+                   alt="clauwelery"
+                   style="max-height: 80px" />
             </a>
           </div>
         </div>
-
         <div class="col-lg-6 d-none d-lg-block">
           <div class="search_btn" style="position: relative">
             <form action="#product-list" method="get">
-              <input
-                type="text"
-                name="search"
-                placeholder="Search beads, necklaces, bracelets..."
-                style="
-                  width: 100%;
-                  padding: 8px 40px 8px 15px;
-                  border: 1px solid #ddd;
-                  border-radius: 25px;
-                "
-              />
-              <button
-                type="submit"
-                style="
-                  position: absolute;
-                  right: 10px;
-                  top: 50%;
-                  transform: translateY(-50%);
-                  background: none;
-                  border: none;
-                "
-              >
-                <i
-                  class="ion-ios-search-strong"
-                  style="font-size: 18px; color: #be185d"
-                ></i>
+              <input type="text"
+                     name="search"
+                     placeholder="Search beads, necklaces, bracelets..."
+                     style="width: 100%;
+                            padding: 8px 40px 8px 15px;
+                            border: 1px solid #ddd;
+                            border-radius: 25px" />
+              <button type="submit"
+                      style="position: absolute;
+                             right: 10px;
+                             top: 50%;
+                             transform: translateY(-50%);
+                             background: none;
+                             border: none">
+                <i class="ion-ios-search-strong" style="font-size: 18px; color: #be185d"></i>
               </button>
             </form>
           </div>
         </div>
-
         <div class="col-lg-3 col-md-9 col-8">
           <div class="middel_right text-right">
             <!-- Mobile search toggle -->
             <div class="search_btn d-lg-none d-inline-block mr-3">
-              <a
-                href="#"
-                onclick="
-                  document
-                    .querySelector('.mobile-search')
-                    .classList.toggle('d-none');
-                  return false;
-                "
-              >
+              <a href="#"
+                 onclick=" document .querySelector('.mobile-search') .classList.toggle('d-none'); return false; ">
                 <i class="ion-ios-search-strong" style="font-size: 20px"></i>
               </a>
             </div>
-
             <!-- Mini cart -->
             <div class="cart_link d-inline-block">
               <a href="#" id="cartToggle">
                 <i class="ion-android-cart" style="font-size: 20px"></i>
                 <span class="cart_text_quantity" id="cartTotal">KSh 0</span>
-                <span class="cart_quantity" id="cartCount" style="display: none"
-                  >0</span
-                >
+                <span class="cart_quantity" id="cartCount" style="display: none">0</span>
               </a>
-
               <!-- Mini cart dropdown -->
               <div class="mini_cart" id="miniCart">
                 <div class="cart_close">
-                  <div class="cart_text"><h3>Your Order</h3></div>
+                  <div class="cart_text">
+                    <h3>Your Order</h3>
+                  </div>
                   <div class="mini_cart_close">
-                    <a
-                      href="javascript:void(0)"
-                      onclick="
-                        document.getElementById('miniCart').style.display =
-                          'none'
-                      "
-                    >
+                    <a href="javascript:void(0)"
+                       onclick=" document.getElementById('miniCart').style.display = 'none' ">
                       <i class="ion-android-close"></i>
                     </a>
                   </div>
@@ -139,13 +106,9 @@
                 </div>
                 <div class="mini_cart_footer">
                   <div class="cart_button checkout">
-                    <a
-                      class="active"
-                      href="https://wa.me/254702413456?text=Hi!%20I%20want%20to%20place%20an%20order%20from%Clauwelery."
-                      target="_blank"
-                    >
-                      Order via WhatsApp
-                    </a>
+                    <a class="active"
+                       href="https://wa.me/254745547755?text=Hi!%20I%20want%20to%20place%20an%20order%20from%GlowBeauty."
+                       target="_blank">Order via WhatsApp</a>
                   </div>
                 </div>
               </div>
@@ -153,61 +116,49 @@
           </div>
         </div>
       </div>
-
       <!-- Mobile search bar (hidden by default) -->
       <div class="mobile-search d-none mt-2 d-lg-none">
         <form action="#product-list" method="get">
-          <input
-            type="text"
-            name="search"
-            placeholder="Search products..."
-            class="form-control"
-            style="border-radius: 25px"
-          />
+          <input type="text"
+                 name="search"
+                 placeholder="Search products..."
+                 class="form-control"
+                 style="border-radius: 25px" />
         </form>
       </div>
     </div>
   </div>
-
   <!-- Bottom nav: Only 4 links -->
-  <div class="header_bottom sticky-header" style="border-top: 1px solid #eee">
+  <div class="header_bottom sticky-header"
+       style="border-top: 1px solid #eee">
     <div class="container">
       <div class="row align-items-center">
         <div class="col-12">
           <div class="main_menu_inner">
             <div class="logo_sticky d-none">
               <a href="{% url 'home' %}">
-                <img
-                  src="{% webpack_static 'images/logo.png' %}"
-                  alt="KabuBeads"
-                  style="max-height: 40px"
-                />
+                <img src="{% webpack_static 'images/logo.png' %}"
+                     alt="KabuBeads"
+                     style="max-height: 40px" />
               </a>
             </div>
             <div class="main_menu">
               <nav>
                 <ul>
-                  <li
-                    class="{% if request.resolver_match.url_name == 'home' %}active{% endif %}"
-                  >
+                  <li class="{% if request.resolver_match.url_name == 'home' %}active{% endif %}">
                     <a href="{% url 'home' %}">Home</a>
                   </li>
-                  <li
-                    class="{% if request.resolver_match.url_name == 'product-list' %}active{% endif %}"
-                  >
+                  <li class="{% if request.resolver_match.url_name == 'product-list' %}active{% endif %}">
                     <a href="#product-list">Shop Beads</a>
                   </li>
-                  <li
-                    class="{% if request.resolver_match.url_name == 'about' %}active{% endif %}"
-                  >
+                  <li class="{% if request.resolver_match.url_name == 'about' %}active{% endif %}">
                     <a href="{% url 'about' %}">About</a>
                   </li>
                   <li>
-                    <a
-                      href="https://wa.me/254702413456"
-                      target="_blank"
-                      style="color: #be185d; font-weight: 600"
-                    >
+                    <a href="https://wa.me/254745547755"
+                       target="_blank"
+                       style="color: #be185d;
+                              font-weight: 600">
                       <i class="ion-social-whatsapp"></i> Quick Order
                     </a>
                   </li>

@@ -1,7 +1,6 @@
 {% load webpack_static from webpack_loader %}
 
 <div class="off_canvars_overlay"></div>
-
 <div class="Offcanvas_menu">
   <div class="container">
     <div class="row">
@@ -12,28 +11,24 @@
             <i class="ion-navicon"></i>
           </a>
         </div>
-
         <div class="Offcanvas_menu_wrapper">
           <!-- Close button -->
-
           <div class="d-flex align-items-center">
-          <!-- Close button -->
-          <div class="canvas_close">
-            <a href="javascript:void(0)">
-              <i class="ion-android-close"></i>
-            </a>
+            <!-- Close button -->
+            <div class="canvas_close">
+              <a href="javascript:void(0)">
+                <i class="ion-android-close"></i>
+              </a>
+            </div>
+            <!-- Delivery info -->
+            <div class="welcome_text">
+              <p>
+                Free hostel delivery at
+                <br />
+                <strong>Kabarak University</strong> — Nakuru Campus
+              </p>
+            </div>
           </div>
-
-          <!-- Delivery info -->
-          <div class="welcome_text">
-            <p>
-              Free hostel delivery at <br />
-              <strong>Kabarak University</strong> — Nakuru Campus
-            </p>
-          </div>
-
-          </div>
-
           <!-- Contact -->
           <div class="home_contact">
             <div class="contact_box">
@@ -41,49 +36,40 @@
                 <i class="fab fa-whatsapp" style="color: #25d366"></i> WhatsApp
               </label>
               <p>
-                <a href="https://wa.me/254702413456" target="_blank">
-                  0702 413 456
-                </a>
+                <a href="https://wa.me/254745547755" target="_blank">0745 547 755</a>
               </p>
             </div>
             <div class="contact_box">
-              <label> <i class="fas fa-phone"></i> Call </label>
+              <label>
+                <i class="fas fa-phone"></i> Call
+              </label>
               <p>
-                <a href="tel:+254702413456">0702 413 456</a>
+                <a href="tel:+254745547755">0745 547 755</a>
               </p>
             </div>
           </div>
-
           <!-- Mobile nav -->
           <div id="menu" class="text-left">
             <ul class="offcanvas_main_menu">
-              <li
-                class="{% if request.resolver_match.url_name == 'home' %}active{% endif %}"
-              >
+              <li class="{% if request.resolver_match.url_name == 'home' %}active{% endif %}">
                 <a href="{% url 'home' %}">Home</a>
               </li>
-              <li
-                class="{% if request.resolver_match.url_name == 'product-list' %}active{% endif %}"
-              >
+              <li class="{% if request.resolver_match.url_name == 'product-list' %}active{% endif %}">
                 <a href="#product-list">Shop Beads</a>
               </li>
-              <li
-                class="{% if request.resolver_match.url_name == 'about' %}active{% endif %}"
-              >
+              <li class="{% if request.resolver_match.url_name == 'about' %}active{% endif %}">
                 <a href="{% url 'about' %}">About</a>
               </li>
               <li>
-                <a
-                  href="https://wa.me/254702413456"
-                  target="_blank"
-                  style="color: #be185d; font-weight: 600"
-                >
+                <a href="https://wa.me/254745547755"
+                   target="_blank"
+                   style="color: #be185d;
+                          font-weight: 600">
                   <i class="fab fa-whatsapp"></i> Quick Order
                 </a>
               </li>
             </ul>
           </div>
-
           <!-- Footer -->
           <div class="Offcanvas_footer">
             <span>

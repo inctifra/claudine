@@ -1,4 +1,4 @@
-# Clauwelery
+# GlowBeauty
 
 License: Apache Software License 2.0
 

@@ -13,56 +13,64 @@
 // limitations under the License.
 /* Pagination container */
 .swiper-pagination {
-    bottom: 20px !important;
+  bottom: 20px !important;
 }
 
 /* Default bullets */
 .swiper-pagination-bullet {
-    width: 12px;
-    height: 12px;
-    background: rgba(192, 149, 120, 0.35);
-    border: 2px solid #c09578;
-    opacity: 1;
-    margin: 0 6px !important;
-    transition: all 0.35s ease;
+  width: 12px;
+  height: 12px;
+  background: rgba(192, 149, 120, 0.35);
+  border: 2px solid #c09578;
+  opacity: 1;
+  margin: 0 6px !important;
+  transition: all 0.35s ease;
 }
 
 /* Hover effect */
 .swiper-pagination-bullet:hover {
-    background: #c09578;
-    transform: scale(1.2);
+  background: #c09578;
+  transform: scale(1.2);
 }
 
 /* Active bullet */
 .swiper-pagination-bullet-active {
-    width: 32px;
-    border-radius: 30px;
-    background: #c09578;
-    box-shadow: 0 0 15px rgba(192, 149, 120, 0.45);
+  width: 32px;
+  border-radius: 30px;
+  background: #c09578;
+  box-shadow: 0 0 15px rgba(192, 149, 120, 0.45);
 }
 .swiper-pagination-bullet {
-    width: 10px;
-    height: 10px;
-    background: rgba(255,255,255,.35);
-    border: 2px solid #c09578;
-    opacity: 1;
-    transition: all .4s ease;
+  width: 10px;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.35);
+  border: 2px solid #c09578;
+  opacity: 1;
+  transition: all 0.4s ease;
 }
 
 .swiper-pagination-bullet-active {
-    width: 40px;
-    height: 10px;
-    border-radius: 999px;
-    background: linear-gradient(90deg, #c09578, #e4c7a8);
-    border: none;
-    box-shadow:
-        0 4px 15px rgba(192,149,120,.35),
-        0 0 8px rgba(192,149,120,.5);
+  width: 40px;
+  height: 10px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #c09578, #e4c7a8);
+  border: none;
+  box-shadow:
+    0 4px 15px rgba(192, 149, 120, 0.35),
+    0 0 8px rgba(192, 149, 120, 0.5);
 }
 
-
 .product_container .swiper-slide {
-    background:  #ffffff;
+  background: #ffffff;
 }
 
 @import "./sections/seller.scss";
+.footer_highlight-word {
+  color: #c09578;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  &:hover {
+    color: #ffffff;
+    text-decoration: underline;
+  }
+}

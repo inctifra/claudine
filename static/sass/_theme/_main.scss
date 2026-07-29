@@ -669,15 +669,11 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 }
 @media only screen and (max-width: 767px) {
   .canvas_open {
-    right: 20px;
-    top: 27px;
+    right: 0;
+    top: 14px;
   }
 }
-@media only screen and (max-width: 575px) {
-  .canvas_open {
-    top: 22px;
-  }
-}
+
 .canvas_open a {
   font-size: 30px;
   color: #5a5a5a;
@@ -1141,7 +1137,6 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 }
 
 .header_middel {
-  padding: 40px 0;
   border-bottom: 1px solid #ebebeb;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -1152,7 +1147,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 }
 @media only screen and (max-width: 767px) {
   .header_middel {
-    padding: 20px 0 23px;
+    padding: 10px 0;
     border-bottom: 0;
   }
 }

@@ -1,78 +1,66 @@
-        <div class="product_area">
-          <div class="product_tab_button">
-            <ul class="nav" role="tablist">
-              <li>
-                <a
-                  data-bs-toggle="tab"
-                  href="#featured"
-                  role="tab"
-                  aria-controls="featured"
-                  >Featured</a
-                >
-              </li>
-              <li>
-                <a
-                  data-bs-toggle="tab"
-                  href="#arrivals"
-                  role="tab"
-                  aria-controls="arrivals"
-                  >New Arrivals</a
-                >
-              </li>
-              <li>
-                <a
-                  data-bs-toggle="tab"
-                  href="#onsale"
-                  class="active"
-                  role="tab"
-                  aria-controls="onsale"
-                  >Onsale</a
-                >
-              </li>
-            </ul>
+<div class="product_area">
+  <div class="product_tab_button">
+    <ul class="nav" role="tablist">
+      <li>
+        <a data-bs-toggle="tab"
+           href="#featured"
+           role="tab"
+           aria-controls="featured">Featured</a>
+      </li>
+      <li>
+        <a data-bs-toggle="tab"
+           href="#arrivals"
+           role="tab"
+           aria-controls="arrivals">New Arrivals</a>
+      </li>
+      <li>
+        <a data-bs-toggle="tab"
+           href="#onsale"
+           class="active"
+           role="tab"
+           aria-controls="onsale">Onsale</a>
+      </li>
+    </ul>
+  </div>
+  <div class="tab-content">
+    <div class="tab-pane fade" id="featured" role="tabpanel">
+      <div class="product_container">
+        <div class="swiper productSwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">{% include "pages/components/product_list_card.html" %}</div>
+            <div class="swiper-slide">{% include "pages/components/product_list_card.html" %}</div>
+            <div class="swiper-slide">{% include "pages/components/product_list_card.html" %}</div>
           </div>
-          <div class="tab-content">
-            <div class="tab-pane fade" id="featured" role="tabpanel">
-             <div class="product_container">
-  <div class="swiper productSwiper">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide">{% include "pages/components/product_list_card.html" %}</div>
-      <div class="swiper-slide">{% include "pages/components/product_list_card.html" %}</div>
-      <div class="swiper-slide">{% include "pages/components/product_list_card.html" %}</div>
-    </div>
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
-  </div>
-</div>
-
-            </div>
-            <div class="tab-pane fade" id="arrivals" role="tabpanel">
-              <div class="product_container">
-  <div class="swiper productSwiper">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide">{% include "pages/components/product_list_card.html" %}</div>
-      <div class="swiper-slide">{% include "pages/components/product_list_card.html" %}</div>
-      <div class="swiper-slide">{% include "pages/components/product_list_card.html" %}</div>
-    </div>
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
-  </div>
-</div>
-
-            </div>
-            <div class="tab-pane fade active show" id="onsale" role="tabpanel">
-             <div class="product_container">
-  <div class="swiper productSwiper">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide">{% include "pages/components/product_list_card.html" %}</div>
-      <div class="swiper-slide">{% include "pages/components/product_list_card.html" %}</div>
-      <div class="swiper-slide">{% include "pages/components/product_list_card.html" %}</div>
-    </div>
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
-  </div>
-</div>
-
-            </div>
-          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
         </div>
+      </div>
+    </div>
+    <div class="tab-pane fade" id="arrivals" role="tabpanel">
+      <div class="product_container">
+        <div class="swiper productSwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">{% include "pages/components/product_list_card.html" %}</div>
+            <div class="swiper-slide">{% include "pages/components/product_list_card.html" %}</div>
+            <div class="swiper-slide">{% include "pages/components/product_list_card.html" %}</div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </div>
+    </div>
+    <div class="tab-pane fade active show" id="onsale" role="tabpanel">
+      <div class="product_container">
+        <div class="swiper productSwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">{% include "pages/components/product_list_card.html" %}</div>
+            <div class="swiper-slide">{% include "pages/components/product_list_card.html" %}</div>
+            <div class="swiper-slide">{% include "pages/components/product_list_card.html" %}</div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

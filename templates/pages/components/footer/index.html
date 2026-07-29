@@ -1,56 +1,66 @@
 {% load webpack_static from webpack_loader %}
 
-<footer class="footer_widgets" style="background: #1a1a2e; color: #fff; padding: 50px 0 20px;">
+<footer class="footer_widgets"
+        style="background: #1a1a2e;
+               color: #fff;
+               padding: 50px 0 20px">
   <div class="container">
     <div class="footer_top">
       <div class="row">
-        
         <!-- Brand & Contact -->
         <div class="col-lg-4 col-md-6 col-sm-8 mb-4">
           <div class="widgets_container contact_us">
-            <h3 style="color: #be185d; font-size: 1.5rem; margin-bottom: 20px;">
-              <i class="fas fa-gem"></i> Clauwelery
+            <h3 style="color: #be185d; font-size: 1.5rem; margin-bottom: 20px">
+              <a href="{% url 'home' %}">
+                <img src="{% webpack_static 'images/favicons/logo-white.png' %}"
+                     alt="clauwelery"
+                     style="max-height: 80px" />
+              </a>
             </h3>
-            <p style="opacity: 0.8; line-height: 1.7;">
-              <strong>Clauwelery</strong> is a one-student studio run by Claudine at Kabarak University.
-              Each necklace, bracelet, and ornament is hand-knitted with patience and delivered free to your hostel door.
+            <p style="opacity: 0.8; line-height: 1.7">
+              <strong>GlowBeauty</strong> is where beauty meets elegance.
+              Discover carefully curated beauty essentials, luxurious
+              accessories, and timeless collections designed to elevate your
+              everyday style.
             </p>
             <div class="footer_contact mt-3">
               <p>
-                <i class="fas fa-location-dot" style="color: #be185d;"></i> 
-                Kabarak University, Nakuru
+                <i class="fab fa-whatsapp" style="color: #25d366"></i>
+                <a href="https://wa.me/254745547755" target="_blank" style="color: #fff">0745 547 755</a>
               </p>
               <p>
-                <i class="fab fa-whatsapp" style="color: #25d366;"></i>
-                <a href="https://wa.me/254702413456" target="_blank" style="color: #fff;">
-                    0702 413 456
-                </a>
-              </p>
-              <p>
-                <i class="fas fa-envelope" style="color: #be185d;"></i>
-                <a href="mailto:hello@lauwelery.com" style="color: #fff;">hello@lauwelery.com</a>
+                <i class="fas fa-envelope" style="color: #be185d"></i>
+                <a href="mailto:hello@glowbeauty.com" style="color: #fff">hello@glowbeauty.com</a>
               </p>
             </div>
           </div>
         </div>
-
         <!-- Quick Links -->
         <div class="col-lg-2 col-md-6 col-sm-4 col-6 mb-4">
           <div class="widgets_container widget_menu">
-            <h3 style="color: #fff; font-size: 1.1rem; margin-bottom: 20px;">Quick Links</h3>
+            <h3 style="color: #fff; font-size: 1.1rem; margin-bottom: 20px">Quick Links</h3>
             <div class="footer_menu">
-              <ul style="list-style: none; padding: 0;">
-                <li style="margin-bottom: 10px;">
-                  <a href="{% url 'home' %}" style="color: rgba(255,255,255,0.7); text-decoration: none;">Home</a>
+              <ul style="list-style: none; padding: 0">
+                <li style="margin-bottom: 10px">
+                  <a href="{% url 'home' %}"
+                     style="color: rgba(255, 255, 255, 0.7);
+                            text-decoration: none">Home</a>
                 </li>
-                <li style="margin-bottom: 10px;">
-                  <a href="#" style="color: rgba(255,255,255,0.7); text-decoration: none;">Shop Beads</a>
+                <li style="margin-bottom: 10px">
+                  <a href="#"
+                     style="color: rgba(255, 255, 255, 0.7);
+                            text-decoration: none">Shop Beads</a>
                 </li>
-                <li style="margin-bottom: 10px;">
-                  <a href="{% url 'about' %}" style="color: rgba(255,255,255,0.7); text-decoration: none;">About</a>
+                <li style="margin-bottom: 10px">
+                  <a href="{% url 'about' %}"
+                     style="color: rgba(255, 255, 255, 0.7);
+                            text-decoration: none">About</a>
                 </li>
-                <li style="margin-bottom: 10px;">
-                  <a href="https://wa.me/254712345678" target="_blank" style="color: #25d366; text-decoration: none;">
+                <li style="margin-bottom: 10px">
+                  <a href="https://wa.me/254712345678"
+                     target="_blank"
+                     style="color: #25d366;
+                            text-decoration: none">
                     <i class="fab fa-whatsapp"></i> Order Now
                   </a>
                 </li>
@@ -58,103 +68,122 @@
             </div>
           </div>
         </div>
-
         <!-- Categories -->
         <div class="col-lg-2 col-md-6 col-sm-4 col-6 mb-4">
           <div class="widgets_container widget_menu">
-            <h3 style="color: #fff; font-size: 1.1rem; margin-bottom: 20px;">Collections</h3>
+            <h3 style="color: #fff; font-size: 1.1rem; margin-bottom: 20px">Collections</h3>
             <div class="footer_menu">
-              <ul style="list-style: none; padding: 0;">
-                <li style="margin-bottom: 10px;">
-                  <a href="#?category__slug=neckwear" style="color: rgba(255,255,255,0.7); text-decoration: none;">Necklaces</a>
+              <ul style="list-style: none; padding: 0">
+                <li style="margin-bottom: 10px">
+                  <a href="#?category__slug=neckwear"
+                     style="color: rgba(255, 255, 255, 0.7);
+                            text-decoration: none">Necklaces</a>
                 </li>
-                <li style="margin-bottom: 10px;">
-                  <a href="#?category__slug=handwear" style="color: rgba(255,255,255,0.7); text-decoration: none;">Bracelets</a>
+                <li style="margin-bottom: 10px">
+                  <a href="#?category__slug=handwear"
+                     style="color: rgba(255, 255, 255, 0.7);
+                            text-decoration: none">Bracelets</a>
                 </li>
-                <li style="margin-bottom: 10px;">
-                  <a href="#?category__slug=ornaments" style="color: rgba(255,255,255,0.7); text-decoration: none;">Ornaments</a>
+                <li style="margin-bottom: 10px">
+                  <a href="#?category__slug=ornaments"
+                     style="color: rgba(255, 255, 255, 0.7);
+                            text-decoration: none">Ornaments</a>
                 </li>
               </ul>
             </div>
           </div>
         </div>
-
         <!-- Social & Hours -->
         <div class="col-lg-4 col-md-6 col-sm-8 mb-4">
           <div class="widgets_container">
-            <h3 style="color: #fff; font-size: 1.1rem; margin-bottom: 20px;">Follow Us</h3>
-            <p style="opacity: 0.8; font-size: 0.9rem;">
-              DM us on Instagram or WhatsApp for custom orders!
-            </p>
-            <ul style="list-style: none; padding: 0; display: flex; gap: 15px; margin-top: 15px;">
+            <h3 style="color: #fff; font-size: 1.1rem; margin-bottom: 20px">Follow Us</h3>
+            <p style="opacity: 0.8; font-size: 0.9rem">DM us on Instagram or WhatsApp for custom orders!</p>
+            <ul style="list-style: none;
+                       padding: 0;
+                       display: flex;
+                       gap: 15px;
+                       margin-top: 15px">
               <li>
-                <a href="#" style="color: #fff; font-size: 1.3rem;">
+                <a href="#" style="color: #fff; font-size: 1.3rem">
                   <i class="fab fa-instagram"></i>
                 </a>
               </li>
               <li>
-                <a href="#" style="color: #fff; font-size: 1.3rem;">
+                <a href="#" style="color: #fff; font-size: 1.3rem">
                   <i class="fab fa-tiktok"></i>
                 </a>
               </li>
               <li>
-                <a href="https://wa.me/254712345678" target="_blank" style="color: #25d366; font-size: 1.3rem;">
+                <a href="https://wa.me/254712345678"
+                   target="_blank"
+                   style="color: #25d366;
+                          font-size: 1.3rem">
                   <i class="fab fa-whatsapp"></i>
                 </a>
               </li>
             </ul>
-            
-            <div class="mt-4" style="padding: 15px; background: rgba(255,255,255,0.05); border-radius: 8px;">
-              <p style="margin: 0; font-size: 0.85rem; opacity: 0.9;">
-                <i class="fas fa-clock" style="color: #be185d;"></i> 
-                <strong>Delivery Hours:</strong><br>
-                Mon–Sat: 4:00 PM – 8:00 PM<br>
-                <span style="opacity: 0.6;">(After classes)</span>
+            <div class="mt-4"
+                 style="padding: 15px;
+                        background: rgba(255, 255, 255, 0.05);
+                        border-radius: 8px">
+              <p style="margin: 0; font-size: 0.85rem; opacity: 0.9">
+                <strong>Delivery Hours:</strong>
+                <br />
+                Mon–Sat: 4:00 PM – 8:00 PM
+                <br />
+                {% comment %} <span style="opacity: 0.6">(After classes)</span> {% endcomment %}
               </p>
             </div>
           </div>
         </div>
-
       </div>
     </div>
-
     <!-- Bottom bar -->
-    <div class="footer_bottom" style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; margin-top: 30px;">
-  <div class="row align-items-center">
-    
-    <!-- Left: Copyright -->
-    <div class="col-md-6 text-start mb-2 mb-md-0">
-      <p style="opacity: 0.6; font-size: 0.85rem; margin: 0;">
-        &copy; {% now "Y" %} Clauwelery.
-      </p>
-      <p style="opacity: 0.5; font-size: 0.75rem; margin: 4px 0 0 0;">
-        <strong>Clauwelery</strong> is owned and operated by <strong>Claudine</strong>
-      </p>
+    <div class="footer_bottom"
+         style="border-top: 1px solid rgba(255, 255, 255, 0.1);
+                padding-top: 20px;
+                margin-top: 30px">
+      <div class="row align-items-center">
+        <!-- Left: Copyright -->
+        <div class="col-md-6 text-start mb-2 mb-md-0">
+          <p style="opacity: 0.6; font-size: 0.85rem; margin: 0">&copy; {% now "Y" %} GlowBeauty.</p>
+          <p style="opacity: 0.5; font-size: 0.75rem; margin: 4px 0 0 0">
+            <strong>GlowBeauty</strong> is a premium beauty brand for
+            <span class="footer_highlight-word">timeless</span>,
+            <span class="footer_highlight-word">beauty</span> and
+            <span class="footer_highlight-word">confidence</span>
+          </p>
+        </div>
+        <!-- Right: Legal links -->
+        <div class="col-md-6 text-md-end text-start">
+          <ul style="list-style: none;
+                     padding: 0;
+                     margin: 0;
+                     display: flex;
+                     gap: 20px;
+                     flex-wrap: wrap"
+              class="justify-content-md-end justify-content-start">
+            <li>
+              <a href=""
+                 style="color: rgba(255, 255, 255, 0.6);
+                        font-size: 0.8rem;
+                        text-decoration: none">Privacy Policy</a>
+            </li>
+            <li>
+              <a href=""
+                 style="color: rgba(255, 255, 255, 0.6);
+                        font-size: 0.8rem;
+                        text-decoration: none">Terms of Use</a>
+            </li>
+            <li>
+              <a href=""
+                 style="color: rgba(255, 255, 255, 0.6);
+                        font-size: 0.8rem;
+                        text-decoration: none">Money-Back Guarantee</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
-
-    <!-- Right: Legal links -->
-    <div class="col-md-6 text-md-end text-start">
-      <ul style="list-style: none; padding: 0; margin: 0; display: flex; gap: 20px; flex-wrap: wrap;" 
-          class="justify-content-md-end justify-content-start">
-        <li>
-          <a href="" style="color: rgba(255,255,255,0.6); font-size: 0.8rem; text-decoration: none;">
-            Privacy Policy
-          </a>
-        </li>
-        <li>
-          <a href="" style="color: rgba(255,255,255,0.6); font-size: 0.8rem; text-decoration: none;">
-            Terms of Use
-          </a>
-        </li>
-        <li>
-          <a href="" style="color: rgba(255,255,255,0.6); font-size: 0.8rem; text-decoration: none;">
-            Money-Back Guarantee
-          </a>
-        </li>
-      </ul>
-    </div>
-
-  </div>
-</div>
   </div>
 </footer>

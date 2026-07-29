@@ -17,7 +17,6 @@ import Swiper from "swiper";
 import { Navigation, Pagination, Autoplay, EffectFade } from "swiper/modules";
 import "../../../sass/pages/home.scss";
 
-
 function handleHeroSlider() {
   new Swiper(".bannerHeroSwiper", {
     modules: [Navigation, Pagination, Autoplay, EffectFade],
@@ -45,6 +44,94 @@ function handleHeroSlider() {
   });
 }
 
+function handleCategorySlider() {
+  new Swiper(".categorySwiper", {
+    modules: [Navigation, Autoplay, EffectFade],
+
+    loop: true,
+
+    speed: 900,
+
+    spaceBetween: 30,
+
+    autoplay: {
+      delay: 3500,
+      disableOnInteraction: false,
+    },
+
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+      },
+
+      576: {
+        slidesPerView: 2,
+      },
+
+      992: {
+        slidesPerView: 3,
+      },
+
+      1200: {
+        slidesPerView: 4,
+      },
+    },
+  });
+}
+
+function handleProductsSlider() {
+  new Swiper(".productSwiper", {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+      992: { slidesPerView: 4 },
+      576: { slidesPerView: 2 },
+      0: { slidesPerView: 1 },
+    },
+  });
+}
+
+function handleSellerSlider(){
+  new Swiper(".sellerSwiper", {
+        modules: [Navigation, Autoplay, EffectFade],
+
+      slidesPerView: 1,
+      spaceBetween: 30,
+      loop: true,
+      grabCursor: true,
+      autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+      },
+      pagination: {
+        el: ".seller_pagination",
+        clickable: true,
+        dynamicBullets: true,
+      },
+       
+        
+      breakpoints: {
+        576: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 25,
+        },
+
+      },
+    });
+}
+
 $(function () {
   handleHeroSlider();
+  handleCategorySlider();
+  handleProductsSlider();
+  handleSellerSlider();
 });

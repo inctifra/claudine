@@ -1,0 +1,66 @@
+{% load webpack_static from webpack_loader %}
+
+
+      <div class="col-12">
+        <div class="section_title">
+          <h2>Verified Campus Sellers</h2>
+          <p>Trusted students crafting quality jewelry right from campus</p>
+        </div>
+
+        <div class="swiper sellerSwiper">
+          <div class="swiper-wrapper">
+            <!-- Seller 1 -->
+            <div class="swiper-slide">
+              <div class="single_seller">
+                <div class="seller_badge">
+                  <i class="ion-ios-checkmark-circle"></i>
+                  <span>Verified</span>
+                </div>
+                <div class="seller_thumb">
+                  <a href="seller-profile.html">
+                    <img
+                      src="{% webpack_static 'images/seller/seller1.webp' %}"
+                      alt="Sarah's Beads"
+                    />
+                  </a>
+                </div>
+                <div class="seller_content">
+                  <h3><a href="seller-profile.html">Sarah's Beads</a></h3>
+                  <span class="seller_major">Fine Arts, Year 3</span>
+                  <div class="seller_rating">
+                    <ul>
+                      <li><i class="ion-ios-star"></i></li>
+                      <li><i class="ion-ios-star"></i></li>
+                      <li><i class="ion-ios-star"></i></li>
+                      <li><i class="ion-ios-star"></i></li>
+                      <li><i class="ion-ios-star-half"></i></li>
+                    </ul>
+                    <span class="rating_count">(24 reviews)</span>
+                  </div>
+                  <div class="seller_meta">
+                    <span class="seller_items">18 items</span>
+                    <span class="seller_sales">47 sold</span>
+                  </div>
+                  <div class="seller_tags">
+                    <span>Beaded</span>
+                    <span>Custom</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Swiper Navigation -->
+          <div class="swiper-button-next seller_next">
+            <i class="fa fa-angle-right"></i>
+          </div>
+          <div class="swiper-button-prev seller_prev">
+            <i class="fa fa-angle-left"></i>
+          </div>
+
+          <!-- Swiper Pagination -->
+          <div class="swiper-pagination seller_pagination"></div>
+        </div>
+      </div>
+

@@ -1,0 +1,95 @@
+// Copyright 2026 liont
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     https://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+/* ============================================
+   VERIFIED SELLERS SECTION
+   ============================================ */
+
+.seller_section {
+    padding: 60px 0 80px;
+    // background: #f8f8f8;
+    position: relative;
+    z-index: 1;
+}
+
+.seller_black .section_title h2 {
+    background-color: transparent !important;
+    background: inherit !important;
+}
+
+
+.seller_black .section_title p {
+    color: #aaaaaa;
+}
+
+.seller_black .single_seller {
+    background: #2a2a2a;
+}
+
+.seller_black .single_seller:hover {
+    border-color: #c09578;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+}
+
+.seller_black .seller_content h3 a {
+    color: #ffffff;
+}
+
+.seller_black .seller_content h3 a:hover {
+    color: #c09578;
+}
+
+.seller_black .seller_major {
+    color: #888;
+}
+
+.seller_black .seller_meta span {
+    color: #aaa;
+    background: #333;
+}
+
+.seller_black .seller_tags span {
+    background: #c09578;
+    color: #1a1a1a;
+}
+
+
+.seller_black .seller_meta span {
+    color: #aaa;
+    background: #333;
+}
+
+
+
+.seller_black .swiper-button-next,
+.seller_black .swiper-button-prev {
+    background: #2a2a2a;
+    color: #fff;
+    border: none;
+}
+
+.seller_black .swiper-button-next:hover,
+.seller_black .swiper-button-prev:hover {
+    background: #c09578;
+    border-color: #c09578;
+    color: #1a1a1a;
+}
+
+.seller_black .swiper-pagination-bullet {
+    background: #555;
+}
+
+.seller_black .swiper-pagination-bullet-active {
+    background: #c09578;
+}
+

@@ -1,4 +1,5 @@
 import $ from "jquery";
+import "jquery.ripples";
 
 $(function () {
     "use strict";

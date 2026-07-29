@@ -1,0 +1,72 @@
+{% load webpack_static from webpack_loader %}
+
+<div class="single_product">
+  <div class="product_thumb text-center d-flex align-items-center justify-content-center flex-column">
+    <a class="primary_img" href="product-details.html"
+      ><img src="{% webpack_static 'images/products/product1.webp' %}" alt=""
+    /></a>
+    <a class="secondary_img text-center" href="product-details.html"
+      ><img src="{% webpack_static 'images/products/product1.webp' %}" alt=""
+    /></a>
+    <div class="quick_button">
+      <a href="#"> quick view</a>
+    </div>
+  </div>
+  <div class="product_content">
+    <div class="tag_cate">
+      <a href="#">men</a>
+      <a href="#">Potato chips</a>
+    </div>
+    <h3>
+      <a href="product-details.html">Aliquam furniture</a>
+    </h3>
+    <div class="price_box">
+      <span class="old_price">$80.00</span>
+      <span class="current_price">$75.00</span>
+    </div>
+    <div class="product_hover">
+      <div class="product_ratings">
+        <ul>
+          <li>
+            <a href="#"><i class="ion-ios-star-outline"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="ion-ios-star-outline"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="ion-ios-star-outline"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="ion-ios-star-outline"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="ion-ios-star-outline"></i></a>
+          </li>
+        </ul>
+      </div>
+      <div class="product_desc">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce posuere
+          metus vitae
+        </p>
+      </div>
+      <div class="action_links">
+        <ul>
+          <li>
+            <a href="wishlist.html" title="Wishlist"
+              ><span class="fa-regular fa-heart"></span
+            ></a>
+          </li>
+          <li class="add_to_cart">
+            <a href="cart.html" title="add to cart">add to cart</a>
+          </li>
+          <li>
+            <a href="compare.html" title="compare"
+              ><i class="ion-ios-settings-strong"></i
+            ></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

@@ -35,6 +35,9 @@ importers:
       jquery:
         specifier: ^3.7.1
         version: 3.7.1
+      jquery.ripples:
+        specifier: ^0.6.3
+        version: 0.6.3(jquery@3.7.1)
       mdui:
         specifier: ^2.1.4
         version: 2.1.4
@@ -2180,6 +2183,11 @@ packages:
   jiti@2.7.0:
     resolution: {integrity: sha512-AC/7JofJvZGrrneWNaEnJeOLUx+JlGt7tNa0wZiRPT4MY1wmfKjt2+6O2p2uz2+skll8OZZmJMNqeke7kKbNgQ==}
     hasBin: true
+
+  jquery.ripples@0.6.3:
+    resolution: {integrity: sha512-ZZQtIoPdesJCx59eDpmbUThZs8HkAxNWG7eFogdziqwFx19oktRbC5XNIjY1PKbSx4YtmoQLHfbl4NHR1z9Wmw==}
+    peerDependencies:
+      jquery: '>=1.7.0'
 
   jquery@3.7.1:
     resolution: {integrity: sha512-m4avr8yL8kmFN8psrbFFFmB/If14iN5o9nw/NgnnM+kybDJpRsAynV2BsfpTYrTRysYUdADVD7CkUUizgkpLfg==}
@@ -5676,6 +5684,10 @@ snapshots:
   jiti@2.5.1: {}
 
   jiti@2.7.0: {}
+
+  jquery.ripples@0.6.3(jquery@3.7.1):
+    dependencies:
+      jquery: 3.7.1
 
   jquery@3.7.1: {}
 

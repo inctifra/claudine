@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 @import "animate.css";
 @import "./utils/common";
 
@@ -2658,7 +2658,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 }
 .header_black .cart_info a {
   color: #ffffff;
-  font-family: "Prata", serif;
+  font-family: "Rubik", serif;
 }
 .header_black .cart_info a:hover {
   color: #a8741a;
@@ -2686,7 +2686,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 }
 .header_black .main_menu nav > ul > li > a {
   color: #ffffff;
-  font-family: "Prata", serif;
+  font-family: "Rubik", serif;
   font-weight: 400;
   text-transform: capitalize;
   font-size: 18px;
@@ -2697,7 +2697,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 }
 .header_black .main_menu nav > ul > li ul.sub_menu li a {
   color: #ffffff;
-  font-family: "Prata", serif;
+  font-family: "Rubik", serif;
 }
 .header_black .main_menu nav > ul > li ul.sub_menu li a:hover {
   color: #a8741a;
@@ -2708,7 +2708,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 }
 .header_black .main_menu nav > ul > li ul.mega_menu > li > a {
   color: #ffffff;
-  font-family: "Prata", serif;
+  font-family: "Rubik", serif;
 }
 .header_black .main_menu nav > ul > li ul.mega_menu > li > a:hover {
   color: #a8741a;
@@ -2915,14 +2915,14 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 }
 .sidebar_black_version .main_menu nav > ul > li ul.sub_menu li a {
   color: #ffffff;
-  font-family: "Prata", serif;
+  font-family: "Rubik", serif;
 }
 .sidebar_black_version .main_menu nav > ul > li ul.sub_menu li a:hover {
   color: #a8741a;
 }
 .sidebar_black_version .main_menu nav > ul > li ul.sub_menu li a {
   color: #ffffff;
-  font-family: "Prata", serif;
+  font-family: "Rubik", serif;
 }
 .sidebar_black_version .main_menu nav > ul > li ul.mega_menu {
   background: #242424;
@@ -2930,7 +2930,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 }
 .sidebar_black_version .main_menu nav > ul > li ul.mega_menu > li > a {
   color: #ffffff;
-  font-family: "Prata", serif;
+  font-family: "Rubik", serif;
   text-transform: capitalize;
 }
 .sidebar_black_version .main_menu nav > ul > li ul.mega_menu > li > a:hover {
@@ -2947,7 +2947,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 }
 .sidebar_black_version .main_menu nav > ul > li > a {
   color: #ffffff;
-  font-family: "Prata", serif;
+  font-family: "Rubik", serif;
   text-transform: capitalize;
   font-size: 18px;
 }
@@ -2956,7 +2956,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 }
 .sidebar_black_version .sidebar_newsletter h3 {
   color: #ffffff;
-  font-family: "Prata", serif;
+  font-family: "Rubik", serif;
   text-transform: capitalize;
   font-size: 18px;
   font-weight: 400;
@@ -4226,7 +4226,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 }
 .slider_black .slider_content h1 {
   color: #ffffff;
-  font-family: "Prata", serif;
+  font-family: "Rubik", serif;
   font-weight: 400;
   margin-bottom: 10px;
 }
@@ -4764,7 +4764,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 .banner_black .banner_content h2 {
   color: #a8741a;
   font-weight: 400;
-  font-family: "Prata", serif;
+  font-family: "Rubik", serif;
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .banner_black .banner_content h2 {
@@ -4840,7 +4840,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 }
 .black_fullwidth .banner_text h2 {
   color: #ffffff;
-  font-family: "Prata", serif;
+  font-family: "Rubik", serif;
   font-weight: 400;
 }
 .black_fullwidth .banner_text span {
@@ -4868,7 +4868,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   margin-left: 0;
 }
 .banner_section_five .single_banner.one {
-//   background: url(../img/bg/banner14.jpg);
+  background: url(@images/banner/one.webp);
   height: 300px;
 }
 @media only screen and (max-width: 767px) {
@@ -4911,7 +4911,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 .banner_section_five .banner_text h2 {
   font-size: 30px;
   color: #a8741a;
-  font-family: "Prata", serif;
+  font-family: "Rubik", serif;
   font-weight: 400;
   line-height: 44px;
 }
@@ -5010,7 +5010,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 }
 .banner_fullwidth.black_two .banner_text h2 {
   color: #ffffff;
-  font-family: "Prata", serif;
+  font-family: "Rubik", serif;
   font-size: 48px;
   font-weight: 400;
 }
@@ -5325,9 +5325,10 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   top: 50%;
   z-index: 9;
   left: 0;
+  right: 0;   
+  z-index: 11; 
   background: #ffffff;
   padding: 3px 8px 20px 8px;
-  box-shadow: 0px 6px 7px 0 rgba(0, 0, 0, 0.3);
   transition: all 300ms ease-in-out;
   opacity: 0;
   visibility: hidden;
@@ -5336,17 +5337,20 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 .single_product {
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  margin-bottom: 30px;
+  margin-bottom: 60px;
+   position: relative;  
+   z-index: 1;
 }
 .single_product:hover {
   background: #ffffff;
   border-radius: 3px;
-  box-shadow: 0px 0 15px 0 rgba(0, 0, 0, 0.3);
+  z-index: 10;
 }
 .single_product:hover .product_hover {
-  top: 66%;
+  top: 80%;
   opacity: 1;
   visibility: visible;
+  transform: translateY(-80px);
 }
 
 .product_ratings {
@@ -5465,7 +5469,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   position: absolute;
   left: 0;
   right: 15px;
-  top: 50%;
+  top: 30%;
 }
 .section_title h2 {
   margin-bottom: 0;
@@ -5571,7 +5575,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 .product_black_section .product_tab_button ul.nav li a {
   border-left: 2px solid #2d2d2d;
   color: #ffffff;
-  font-family: "Prata", serif;
+  font-family: "Rubik", serif;
 }
 @media only screen and (max-width: 767px) {
   .product_black_section .product_tab_button ul.nav li a {
@@ -5606,7 +5610,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   padding-right: 5px !important;
 }
 .product_black_section .quick_button a {
-  font-family: "Prata", serif;
+  font-family: "Rubik", serif;
   font-size: 14px;
 }
 .product_black_section .quick_button a:hover {
@@ -5619,7 +5623,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   color: #a8741a;
 }
 .product_black_section .product_content h3 {
-  font-family: "Prata", serif;
+  font-family: "Rubik", serif;
   font-weight: 400;
   font-size: 16px;
 }
@@ -5652,14 +5656,14 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   background: #a8741a;
 }
 .product_black_section .action_links ul li.add_to_cart a {
-  font-family: "Prata", serif;
+  font-family: "Rubik", serif;
 }
 .product_black_section .section_title::before {
   background: #2d2d2d;
 }
 .product_black_section .section_title h2 {
   color: #ffffff;
-  font-family: "Prata", serif;
+  font-family: "Rubik", serif;
   background: #242424;
   font-weight: 400;
 }
@@ -5881,7 +5885,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 }
 .blog_black .section_title h2 {
   color: #ffffff;
-  font-family: "Prata", serif;
+  font-family: "Rubik", serif;
   background: #242424;
   font-weight: 400;
 }
@@ -5898,7 +5902,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   text-align: left;
 }
 .blog_black .blog_content h3 {
-  font-family: "Prata", serif;
+  font-family: "Rubik", serif;
   font-size: 18px;
   font-weight: 400;
 }
@@ -5968,15 +5972,23 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 }
 .newsletter_content form input {
   width: 100%;
-  padding: 10px 224px 10px 20px;
+  padding: 224px;
   border: 2px solid #ebebeb;
   background: none;
   color: #a7a7a7;
   border-radius: 4px;
+  font-size: 20px;
+  height: 48px;
+  height: 100%;
+  &:focus {
+    border: 2px solid #c09578;
+    outline: 2px solid #c09578;
+  }
 }
 @media only screen and (max-width: 767px) {
   .newsletter_content form input {
     padding: 8px 109px 8px 10px;
+    width: 100%;
   }
 }
 .newsletter_content form button {
@@ -6038,8 +6050,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   }
 }
 .newsletter_black h2 {
-  color: #ffffff;
-  font-family: "Prata", serif;
+  font-family: "Rubik", serif;
   font-weight: 400;
 }
 @media only screen and (max-width: 767px) {
@@ -6061,16 +6072,19 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   border: 2px solid #2d2d2d;
   font-size: 12px;
   color: #a0a0a0;
-  padding: 0 20px;
+  padding:20px;
+  height: 48px;
 }
 @media only screen and (max-width: 767px) {
   .newsletter_black .newsletter_content form input {
     width: 250px;
+    width: 100%;
   }
 }
 @media only screen and (max-width: 479px) {
   .newsletter_black .newsletter_content form input {
     width: 160px;
+    width: 100%;
   }
 }
 .newsletter_black .newsletter_content form button {
@@ -6078,12 +6092,20 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   margin-left: 20px;
   height: 48px;
   background: #2e2e2e;
-  font-family: "Prata", serif;
+  font-family: "Rubik", serif;
   font-weight: 400;
 }
 .newsletter_black .newsletter_content form button:hover {
   background: #a8741a;
 }
+
+@media only screen and (max-width: 767px) {
+  .newsletter_black .newsletter_content form button {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
 
 /* 21. shipping css here */
 // .shipping_area {
@@ -6191,7 +6213,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 }
 .shipping_black .single-shipping h3 {
   color: #ffffff;
-  font-family: "Prata", serif;
+  font-family: "Rubik", serif;
   font-weight: 400;
 }
 .shipping_black .single-shipping p {
@@ -6217,7 +6239,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 }
 .shipping_two.s_black2 .shipping_content h3 {
   color: #ffffff;
-  font-family: "Prata", serif;
+  font-family: "Rubik", serif;
   font-weight: 400;
   font-size: 15px;
   margin-bottom: 10px;
@@ -6465,7 +6487,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 }
 .footer_black .widgets_container > h3 {
   color: #ffffff;
-  font-family: "Prata", serif;
+  font-family: "Rubik", serif;
   font-weight: 400;
 }
 .footer_black .footer_contact p {
@@ -6492,7 +6514,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   color: #a8741a;
 }
 .footer_black .product_name h3 {
-  font-family: "Prata", serif;
+  font-family: "Rubik", serif;
   text-transform: capitalize;
 }
 .footer_black .product_name h3 a {
@@ -6513,7 +6535,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 }
 .footer_black .footer_middel_menu ul li a {
   color: #a0a0a0;
-  font-family: "Prata", serif;
+  font-family: "Rubik", serif;
 }
 .footer_black .footer_middel_menu ul li a:hover {
   color: #a8741a;

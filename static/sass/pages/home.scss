@@ -12,12 +12,12 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 /* Pagination container */
-.bannerHeroSwiper .swiper-pagination {
+.swiper-pagination {
     bottom: 20px !important;
 }
 
 /* Default bullets */
-.bannerHeroSwiper .swiper-pagination-bullet {
+.swiper-pagination-bullet {
     width: 12px;
     height: 12px;
     background: rgba(192, 149, 120, 0.35);
@@ -28,19 +28,19 @@
 }
 
 /* Hover effect */
-.bannerHeroSwiper .swiper-pagination-bullet:hover {
+.swiper-pagination-bullet:hover {
     background: #c09578;
     transform: scale(1.2);
 }
 
 /* Active bullet */
-.bannerHeroSwiper .swiper-pagination-bullet-active {
+.swiper-pagination-bullet-active {
     width: 32px;
     border-radius: 30px;
     background: #c09578;
     box-shadow: 0 0 15px rgba(192, 149, 120, 0.45);
 }
-.bannerHeroSwiper .swiper-pagination-bullet {
+.swiper-pagination-bullet {
     width: 10px;
     height: 10px;
     background: rgba(255,255,255,.35);
@@ -49,7 +49,7 @@
     transition: all .4s ease;
 }
 
-.bannerHeroSwiper .swiper-pagination-bullet-active {
+.swiper-pagination-bullet-active {
     width: 40px;
     height: 10px;
     border-radius: 999px;
@@ -59,3 +59,10 @@
         0 4px 15px rgba(192,149,120,.35),
         0 0 8px rgba(192,149,120,.5);
 }
+
+
+.product_container .swiper-slide {
+    background:  #ffffff;
+}
+
+@import "./sections/seller.scss";

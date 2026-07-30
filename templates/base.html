@@ -105,8 +105,8 @@
           {% render_bundle 'tailwind' 'js' attrs='defer' %}
           {% render_bundle 'project' 'js' attrs='defer' %}
         {% endblock javascript %}
-
-        {% block head_extra %}{% endblock head_extra %}
+        {% block head_extra %}
+        {% endblock head_extra %}
       </head>
       <body class="{% block bodyclass %}{% endblock bodyclass %}">
         <div id="glowbeauty-homes-toast-root"></div>
@@ -135,12 +135,12 @@
         {% endblock modal %}
         {% block inline_javascript %}
           {%comment %} Script tags with only code, no src (defer by default). To run
-                                                      with a "defer" so that you run inline code:
-                                                      <script>
-                                                        window.addEventListener("DOMContentLoaded", () => {
-                                                          /* Run whatever you want */
-                                                        });
-                                                      </script>
+                                                                with a "defer" so that you run inline code:
+                                                                <script>
+                                                                  window.addEventListener("DOMContentLoaded", () => {
+                                                                    /* Run whatever you want */
+                                                                  });
+                                                                </script>
           {% endcomment %}
         {% endblock inline_javascript %}
       </body>

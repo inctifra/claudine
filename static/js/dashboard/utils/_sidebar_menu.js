@@ -50,6 +50,7 @@ $toggle_nav_top.click(function () {
   $nav = $('.page-sidebar');
   $nav.toggleClass('open');
   $header.toggleClass('open');
+  // $(".page-body-wrapper .page-sidebar").toggleClass("active")
 
 });
 let $body_part_side = $('.body-part');
@@ -83,8 +84,8 @@ $(window).resize(function () {
   }
 });
 
-// $(".sidebar-menu>li").removeClass("active");
-// $(".sidebar-menu").find("a").removeClass("active");
+$(".sidebar-menu>li").removeClass("active");
+$(".sidebar-menu").find("a").removeClass("active");
 $(".sidebar-menu").find("li a").removeClass("active");
 
 var current = window.location.pathname

@@ -13,6 +13,7 @@
 // limitations under the License.
 
 import "../../sass/dashboard/_main.scss";
+import "../../sass/dashboard/components/header.scss";
 import $ from "jquery";
 
 $(async function(){

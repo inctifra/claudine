@@ -2,7 +2,7 @@
 
 <header class="header_area">
   <!-- Top bar: Only delivery info + contact -->
-  <div class="header_top" style="background: #be185d; color: white">
+  <div class="header_top">
     <div class="container">
       <div class="row align-items-center">
         <div class="col-lg-7 col-md-12">
@@ -19,29 +19,29 @@
                 <a href="https://wa.me/254745547755"
                    target="_blank"
                    style="color: white">
-                  <i class="ion-social-whatsapp"></i> Order on WhatsApp
+                  <i data-feather="message-circle" class="me-2 icon-sm"></i> Order
+                  on WhatsApp
                 </a>
               </li>
               <li>
                 <a href="tel:+254745547755" style="color: white">
-                  <i class="ion-ios-telephone"></i> 0745 547 755
+                  <i data-feather="phone" class="me-2 icon-sm"></i> 0745 547 755
                 </a>
               </li>
               {% if request.user.is_authenticated %}
-              {% with user=request.user %}
-              <li>
-                <a href="{{user.get_dashboard_url}}" style="color: white">
-                  <i class="ion-ios-dashboard"></i> Dashboard
-                </a>
-              </li>
-              {% endwith %}
+                {% with user=request.user %}
+                  <li>
+                    <a href="{{ user.get_dashboard_url }}" style="color: white">
+                      <i data-feather="grid" class="me-2 icon-sm"></i> Dashboard
+                    </a>
+                  </li>
+                {% endwith %}
               {% else %}
-
-              <li>
-                <a href="tel:+254745547755" style="color: white">
-                  <i class="ion-ios-telephone"></i> Login
-                </a>
-              </li>
+                <li>
+                  <a href="{% url 'account_login' %}" style="color: white">
+                    <i data-feather="log-in" class="me-2 icon-sm"></i> Login
+                  </a>
+                </li>
               {% endif %}
             </ul>
           </div>

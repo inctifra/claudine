@@ -1,10 +1,15 @@
 {% extends "dashboard/base.html" %}
 
+{% block header %}
+  {% include "dashboard/buyer/components/navbar/header.html" %}
+{% endblock header %}
+{% block main %}
+  {% block sidebar %}
+    {% include "dashboard/buyer/components/navbar/sidebar.html" %}
+  {% endblock sidebar %}
 
-    {% block header %}
-    
-    {% include "dashboard/buyer/components/navbar/header.html" %}
-    
-    {% endblock header %}
+<div class="page-body">
+    {% block inner_body %}{% endblock inner_body %}
+</div>
 
-    {% block main %}{% endblock main %}
+{% endblock main %}

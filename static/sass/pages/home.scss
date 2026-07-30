@@ -74,3 +74,17 @@
     text-decoration: underline;
   }
 }
+
+.header_area {
+  .header_top {
+    background: #be185d; color: white;
+    .top_right {
+      ul li a {
+        transition: all 0.3s ease;
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+}

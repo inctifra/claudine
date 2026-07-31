@@ -17,7 +17,7 @@ from django.urls import path
 app_name = "dashboard"
 
 urlpatterns = [
-    path("vendors/", include("apps.dashboard.vendor.urls", namespace="vendor")),
+    path("vendor/", include("apps.dashboard.vendor.urls", namespace="vendor")),
     path("blogger/", include("apps.dashboard.blogger.urls", namespace="blogger")),
     path("customer/", include("apps.dashboard.buyer.urls", namespace="buyer")),
 ]

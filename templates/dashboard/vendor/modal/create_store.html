@@ -1,0 +1,40 @@
+<div class="modal fade"
+     id="createStoreModal"
+     aria-labelledby="menuModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <form class="needs-validation"
+            novalidate
+            method="post"
+            action="{% url 'dashboard:vendor:actions:create_store_view' %}">
+        {% csrf_token %}
+        <div class="modal-header border-0 d-flex align-items-center justify-content-between">
+          <h5 class="modal-title" id="menuModalLabel">Add Menu</h5>
+          <button type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close">
+            <i data-feather="x"></i>
+          </button>
+        </div>
+        <div class="modal-body">
+          <!-- Menu Name -->
+          <div class="mb-3">
+            <label class="form-label" for="{{ store_form.name.id_for_label }}">
+              {{ store_form.name.label }} <span class="text-danger">*</span>
+            </label>
+            {% render_field store_form.name %}
+            <div class="form-text text-muted">
+              This name will be shown in the store
+              <strong>"Store Name"</strong>.
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-primary">Create Store</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

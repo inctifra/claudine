@@ -1,0 +1,252 @@
+{% load webpack_static from webpack_loader %}
+
+<div class="page-main-header">
+  <div class="main-header-right mx-3 mx-md-2">
+    <div class="right-sider px-2 d-flex align-items-center flex-grow-1">
+      <!-- Mobile logo -->
+      <div class="main-header-left d-lg-none">
+        <div class="logo-wrapper">
+          <a href="{% url 'home' %}">
+            <img class="blur-up lazyloaded d-block d-lg-none"
+                 src="{% webpack_static 'images/favicons/favicon.png' %}"
+                 alt="" />
+          </a>
+        </div>
+      </div>
+      <!-- Sidebar toggle -->
+      <div class="mobile-sidebar d-lg-none">
+        <div class="media-body text-end switch-sm">
+          <label class="switch">
+            <a href="javascript:void(0)">
+              <i class="sidebar-toggle" data-feather="align-left"></i>
+            </a>
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="left-sider w-100 px-3 ps-1 d-flex align-items-center justify-content-between">
+      <div class="mobile-sidebar d-none d-lg-inline-flex">
+        <div class="media-body text-end switch-sm">
+          <label class="switch">
+            <a href="javascript:void(0)">
+              <i class="sidebar-toggle" data-feather="align-left"></i>
+            </a>
+          </label>
+        </div>
+      </div>
+      <div class="nav-right">
+        <ul class="nav-menus d-flex">
+          <!-- Search -->
+          <li class="flex-grow-md-1">
+            <form class="form-inline search-form">
+              <div class="form-group">
+                <input class="form-control-plaintext"
+                       type="search"
+                       placeholder="Search orders, products, customers..." />
+                <span class="d-sm-none mobile-search">
+                  <i data-feather="search"></i>
+                </span>
+              </div>
+            </form>
+          </li>
+          <!-- Apps -->
+          <li class="onhover-dropdown">
+            <a href="javascript:void(0)" class="text-dark">
+              <i data-feather="grid"></i>
+            </a>
+            <ul class="onhover-show-div p-0 shadow-lg vendor_apps">
+              <li class="p-3">
+                <h6 class="mb-0">Apps & Integrations</h6>
+                <small class="text-muted">Connect your store tools and services</small>
+              </li>
+              <li class="p-0">
+                <div class="container-fluid">
+                  <div class="row g-0 mb-3">
+                    <div class="col-6 vendor_apps__item p-2">
+                      <a href="#"
+                         class="d-flex align-items-center justify-content-center gap-2 p-3">
+                        <i data-feather="shopping-bag"></i>
+                        {% comment %} <span>Products</span> {% endcomment %}
+                      </a>
+                    </div>
+                    <div class="col-6 vendor_apps__item p-2">
+                      <a href="#"
+                         class="d-flex align-items-center justify-content-center gap-2 p-3">
+                        <i data-feather="truck"></i>
+                        {% comment %} <span>Shipping</span> {% endcomment %}
+                      </a>
+                    </div>
+                    <div class="col-6 vendor_apps__item p-2">
+                      <a href="#"
+                         class="d-flex align-items-center justify-content-center gap-2 p-3">
+                        <i data-feather="credit-card"></i>
+                        {% comment %} <span>Payments</span> {% endcomment %}
+                      </a>
+                    </div>
+                    <div class="col-6 vendor_apps__item p-2">
+                      <a href="#"
+                         class="d-flex align-items-center justify-content-center gap-2 p-3">
+                        <i data-feather="bar-chart-2"></i>
+                        {% comment %} <span>Analytics</span> {% endcomment %}
+                      </a>
+                    </div>
+                    <div class="col-6 vendor_apps__item p-2">
+                      <a href="#"
+                         class="d-flex align-items-center justify-content-center gap-2 p-3">
+                        <i data-feather="users"></i>
+                        {% comment %} <span>Customers</span> {% endcomment %}
+                      </a>
+                    </div>
+                    <div class="col-6 vendor_apps__item p-2">
+                      <a href="#"
+                         class="d-flex align-items-center justify-content-center gap-2 p-3">
+                        <i data-feather="package"></i>
+                        {% comment %} <span>Inventory</span> {% endcomment %}
+                      </a>
+                    </div>
+                    <div class="col-6 vendor_apps__item mb-1 p-2">
+                      <a href="#"
+                         class="d-flex align-items-center justify-content-center gap-2 p-3">
+                        <i data-feather="instagram"></i>
+                      </a>
+                    </div>
+                    <div class="col-6 vendor_apps__item p-2">
+                      <a href="#"
+                         class="d-flex align-items-center justify-content-center gap-2 p-3">
+                        <i data-feather="globe"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <!-- Fullscreen -->
+          <li class="d-none">
+            <a class="text-dark" href="#!">
+              <i data-feather="maximize-2"></i>
+            </a>
+          </li>
+          <!-- Messages -->
+          <li>
+            <a href="#" class="text-dark position-relative">
+              <i data-feather="message-square"></i>
+              <span class="badge badge-pill badge-primary pull-right notification-badge">4</span>
+            </a>
+          </li>
+          <!-- Notifications -->
+          <li class="onhover-dropdown">
+            <i data-feather="bell"></i>
+            <span class="badge badge-pill badge-primary pull-right notification-badge">5</span>
+            <span class="dot"></span>
+            <ul class="notification-dropdown onhover-show-div p-0">
+              <li>
+                Notifications
+                <span class="badge badge-pill badge-primary pull-right">5</span>
+              </li>
+              <li>
+                <div class="media">
+                  <div class="media-body">
+                    <h6 class="mt-0">
+                      <span>
+                        <i data-feather="shopping-bag"></i>
+                      </span>
+                      New order received
+                    </h6>
+                    <p class="mb-0">Order #3521 is waiting for processing.</p>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="media">
+                  <div class="media-body">
+                    <h6 class="mt-0">
+                      <span>
+                        <i data-feather="truck"></i>
+                      </span>
+                      Shipment update
+                    </h6>
+                    <p class="mb-0">Three packages have been delivered.</p>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="media">
+                  <div class="media-body">
+                    <h6 class="mt-0">
+                      <span>
+                        <i data-feather="star"></i>
+                      </span>
+                      New review
+                    </h6>
+                    <p class="mb-0">A customer left a 5-star review.</p>
+                  </div>
+                </div>
+              </li>
+              <li class="txt-dark">
+                <a href="#">View all notifications</a>
+              </li>
+            </ul>
+          </li>
+          <!-- Vendor profile -->
+          <li class="onhover-dropdown">
+            <div class="media align-items-center">
+              <img class="align-self-center pull-right img-50 blur-up lazyloaded rounded-pill"
+                   src="{% webpack_static 'images/avatar/avatar1.jpg' %}"
+                   alt="header-user" />
+              <div class="ms-2 d-none d-xl-block">
+                <h6 class="mb-0">Claudine Store</h6>
+                <small>Vendor</small>
+              </div>
+              <div class="dotted-animation">
+                <span class="animate-circle"></span>
+                <span class="main-circle"></span>
+              </div>
+            </div>
+            <ul class="profile-dropdown onhover-show-div p-20 profile-dropdown-hover">
+              <li>
+                <a href="#">
+                  <i data-feather="home"></i>
+                  Store Profile
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i data-feather="package"></i>
+                  Products
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i data-feather="shopping-cart"></i>
+                  Orders
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i data-feather="bar-chart-2"></i>
+                  Analytics
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i data-feather="settings"></i>
+                  Store Settings
+                </a>
+              </li>
+              <li class="mt-1">
+                <a href="{% url 'account_logout' %}">
+                  <i data-feather="log-out"></i>
+                  Logout
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <div class="d-lg-none mobile-toggle pull-right ms-auto">
+          <i data-feather="more-horizontal"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

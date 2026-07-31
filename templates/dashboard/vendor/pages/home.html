@@ -1,0 +1,14 @@
+{% extends "dashboard/vendor/base.html" %}
+
+{% block inner_body %}
+
+
+<div class="container-fluid">
+
+  {% include "dashboard/vendor/pages/components/header.html" with title='Dashboard <small>Vendor Overview</small>'  %}
+
+  {% include "dashboard/vendor/pages/sections/home/summary.html" %}
+
+</div>
+
+{% endblock inner_body %}

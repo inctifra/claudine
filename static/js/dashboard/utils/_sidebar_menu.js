@@ -44,7 +44,7 @@ $.sidebarMenu = function (menu) {
 $.sidebarMenu($('.sidebar-menu'))
 let $nav = $('.page-sidebar');
 let $header = $('.page-main-header');
-let $toggle_nav_top = $('#sidebar-toggle');
+let $toggle_nav_top = $('.sidebar-toggle');
 $toggle_nav_top.click(function () {
   let $this = $(this);
   $nav = $('.page-sidebar');

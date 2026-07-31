@@ -1,0 +1,42 @@
+{% extends "dashboard/base.html" %}
+
+{% load render_bundle from webpack_loader %}
+{% load webpack_static from webpack_loader %}
+
+{% block css %}
+  {{ block.super }}
+  {% render_bundle "vendor" "css" %}
+{% endblock css %}
+{% block javascript %}
+  {{ block.super }}
+  {% render_bundle "vendor" "js" attrs="defer" %}
+{% endblock javascript %}
+{% block header %}
+  {% include "dashboard/vendor/components/navbar/header.html" %}
+{% endblock header %}
+{% block main %}
+  {% block sidebar %}
+    {% include "dashboard/vendor/components/navbar/sidebar.html" %}
+  {% endblock sidebar %}
+  <div class="page-body">
+    {% if user.store %}
+      {% block inner_body %}
+      {% endblock inner_body %}
+    {% else %}
+      <div class="container-fluid">
+        <div class="row min-vh-100 align-items-center justify-content-center">
+          <div class="col-lg-6">
+            <div class="card tab2-card">
+              <div class="card-body text-center">
+                <button type="button" class="btn btn-primary" id="createStoreButton">create store</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    {% endif %}
+  </div>
+{% endblock main %}
+{% block modal %}
+  {% include "dashboard/vendor/modal/create_store.html" %}
+{% endblock modal %}

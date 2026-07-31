@@ -1,7 +1,5 @@
 {% extends "dashboard/buyer/base.html" %}
 
-    {% block inner_body %}
-    
-    Welcome {{request.user.email}} ({{request.user.get_account_type_display}})
-    
-    {% endblock inner_body %}
+{% block inner_body %}
+  Welcome {{ request.user.email }} ({{ request.user.get_account_type_display }})
+{% endblock inner_body %}

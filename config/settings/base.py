@@ -102,6 +102,7 @@ LOCAL_APPS = [
     "apps.dashboard.vendor",
     "apps.dashboard.blogger",
     "apps.dashboard.buyer",
+    "apps.stores",
 ]
 # https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
@@ -207,6 +208,7 @@ TEMPLATES = [
                 "django.template.context_processors.tz",
                 "django.contrib.messages.context_processors.messages",
                 "claudine.users.context_processors.allauth_settings",
+                "apps.dashboard.vendor.context_processor.processor_vendor_context",
             ],
             "builtins": [
                 "widget_tweaks.templatetags.widget_tweaks",

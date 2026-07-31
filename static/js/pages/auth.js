@@ -15,9 +15,26 @@
 import "../../sass/pages/auth.scss";
 import $ from "jquery";
 import { setupAjaxForm } from "../libs/formHandler";
+
 import { toast, ToastProvider } from "../libs/toaster";
+import Choices from "choices.js";
 
 ToastProvider("bottom-right");
+
+
+function initializeSelect(){
+  const selects = document.querySelectorAll("select");
+selects.forEach((select) => {
+        const isMultiple = select.multiple;
+
+        new Choices(select, {
+            removeItemButton: isMultiple,
+            searchEnabled: true,
+            itemSelectText: "",
+            shouldSort: false,
+        });
+    });
+}
 
 $(function () {
   setupAjaxForm(".account_form form", {
@@ -37,4 +54,8 @@ $(function () {
         console.error(cleanedError)
     },
   });
+
+
+  initializeSelect();
+
 });

@@ -6,7 +6,14 @@ from django.utils.text import slugify
 class Category(BaseModel):
     """Handwear, Neckwear, Ornaments, etc."""
 
-    name = models.CharField(max_length=100, unique=True)
+    store = models.ForeignKey(
+        "stores.Store",
+        on_delete=models.SET_NULL,
+        related_name="category_stores",
+        blank=True,
+        null=True,
+    )
+    name = models.CharField(max_length=100)
     slug = models.SlugField(unique=True, blank=True)
     description = models.TextField(blank=True)
     display_order = models.PositiveSmallIntegerField(default=0)
@@ -14,7 +21,12 @@ class Category(BaseModel):
     class Meta(BaseModel.Meta):
         verbose_name_plural = "Categories"
         ordering = ["display_order", "name"]
-
+        constraints = [
+            models.UniqueConstraint(
+                name="unique_store_category_and_name",
+                fields=["store", "name"],
+            ),
+        ]
     def save(self, *args, **kwargs):
         if not self.slug:
             self.slug = slugify(self.name)
@@ -28,13 +40,17 @@ class Product(BaseModel):
     name = models.CharField(max_length=200)
     slug = models.SlugField(unique=True, blank=True)
     category = models.ForeignKey(
-        Category, on_delete=models.PROTECT, related_name="products",
+        Category,
+        on_delete=models.PROTECT,
+        related_name="products",
     )
     description = models.TextField(blank=True)
     price = models.PositiveIntegerField(help_text="Price in your local currency")
     stock_quantity = models.PositiveSmallIntegerField(default=1)
     colors = models.CharField(
-        max_length=200, blank=True, help_text="Comma-separated: Red, Blue, Green",
+        max_length=200,
+        blank=True,
+        help_text="Comma-separated: Red, Blue, Green",
     )
 
     class Meta(BaseModel.Meta):
@@ -66,7 +82,9 @@ class Product(BaseModel):
 
 class ProductImage(BaseModel):
     product = models.ForeignKey(
-        Product, on_delete=models.CASCADE, related_name="images",
+        Product,
+        on_delete=models.CASCADE,
+        related_name="images",
     )
     image = models.ImageField(upload_to="products/%Y/%m/")
     is_primary = models.BooleanField(default=False)

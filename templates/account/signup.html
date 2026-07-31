@@ -15,12 +15,19 @@
       <form action="{{ request.path }}" method="post">
         {% csrf_token %}
         <div class="row">
-          <div class="col-md-12 mb-3">
+          <div class="col-md-6 mb-3">
             <label for="{{ form.email.id_for_label }}">
               {{ form.email.label }} <span>*</span>
             </label>
             {% render_field form.email %}
             <small>We'll send updates to this email.</small>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="{{ form.account_type.id_for_label }}">
+              {{ form.account_type.label }} <span>*</span>
+            </label>
+            {% render_field form.account_type %}
+            <small>Choose the account type you are creating</small>
           </div>
           <div class="col-md-12 mb-3">
             <label for="{{ form.password1.id_for_label }}">

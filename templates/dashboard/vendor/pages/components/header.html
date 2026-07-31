@@ -1,0 +1,21 @@
+  <div class="page-header py-2">
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="page-header-left">
+          <h3>
+           {{title}}
+          </h3>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <ol class="breadcrumb pull-right">
+          <li class="breadcrumb-item">
+            <a href="{% if back_url  %}{{back_url}}{% endif %}">
+              <i data-feather="home"></i>
+            </a>
+          </li>
+          <li class="breadcrumb-item active">{{current_nav|default:"Dashboard"}}</li>
+        </ol>
+      </div>
+    </div>
+  </div>

@@ -29,6 +29,12 @@ importers:
       daisyui:
         specifier: ^5.5.20
         version: 5.5.20
+      datatables.net-dt:
+        specifier: ^3.0.1
+        version: 3.0.1
+      datatables.net-responsive-dt:
+        specifier: ^4.0.1
+        version: 4.0.1
       dotenv:
         specifier: ^17.2.2
         version: 17.2.2
@@ -1741,6 +1747,18 @@ packages:
 
   daisyui@5.5.20:
     resolution: {integrity: sha512-HemJcjl0Gk9rQ8BcgofN6p+EURrqftQG9wK1Hkxs98i49xe68+QxpNvry+PyxwkIUgrbMpNmZ5ZWjmtffAjfhQ==}
+
+  datatables.net-dt@3.0.1:
+    resolution: {integrity: sha512-LyXZuqXslsVqS42GX6yzfCdjPjyb244iokXFjAzlPxCPyILGNKuEhz6K/a8/GKK8tGt6vOEdL12MD+nRjucoNA==}
+
+  datatables.net-responsive-dt@4.0.1:
+    resolution: {integrity: sha512-DGqGq9euWKfBVbrcq2BqWtbl2yQKJ0RDPwxEcMQSNlokaprctvI51KAiA0+TDuzHFNVUkVvt1GIIriVXrk/eLg==}
+
+  datatables.net-responsive@4.0.1:
+    resolution: {integrity: sha512-cc2/cjaEqhNXZ80bzPCiOhlqIwPJNeVTXA1J9W0mc2BO+B/aPPYfy2rGkixKaOtdjEzepprWtFNCIQ7R3DCGIQ==}
+
+  datatables.net@3.0.1:
+    resolution: {integrity: sha512-cV/2DJr42PFMnK9sAoK/QbcuE7g9HYF0x0vOND7WRsG2RWMkiyOY8TOJFbi+uDkBH4I7ggmkBvO+j4gNoh+u3g==}
 
   debug@2.6.9:
     resolution: {integrity: sha512-bC7ElrdJaJnPbAP+1EotYvqZsb3ecl5wi6Bfi6BJTUcNowp6cvspg0jXznRTKDjm/E7AdgFBVeAPVMNcKGsHMA==}
@@ -5351,6 +5369,21 @@ snapshots:
       css-tree: 2.2.1
 
   daisyui@5.5.20: {}
+
+  datatables.net-dt@3.0.1:
+    dependencies:
+      datatables.net: 3.0.1
+
+  datatables.net-responsive-dt@4.0.1:
+    dependencies:
+      datatables.net-dt: 3.0.1
+      datatables.net-responsive: 4.0.1
+
+  datatables.net-responsive@4.0.1:
+    dependencies:
+      datatables.net: 3.0.1
+
+  datatables.net@3.0.1: {}
 
   debug@2.6.9:
     dependencies:

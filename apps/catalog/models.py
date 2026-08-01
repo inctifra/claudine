@@ -1,3 +1,4 @@
+from apps.catalog.managers import CategoryManager, ProductImageManager, ProductManager
 from core.models import BaseModel
 from django.db import models
 from django.utils.text import slugify
@@ -17,6 +18,9 @@ class Category(BaseModel):
     slug = models.SlugField(unique=True, blank=True)
     description = models.TextField(blank=True)
     display_order = models.PositiveSmallIntegerField(default=0)
+
+
+    objects = CategoryManager()
 
     class Meta(BaseModel.Meta):
         verbose_name_plural = "Categories"
@@ -53,6 +57,8 @@ class Product(BaseModel):
         help_text="Comma-separated: Red, Blue, Green",
     )
 
+    objects = ProductManager()
+
     class Meta(BaseModel.Meta):
         ordering = ["-created_at"]
 
@@ -88,6 +94,8 @@ class ProductImage(BaseModel):
     )
     image = models.ImageField(upload_to="products/%Y/%m/")
     is_primary = models.BooleanField(default=False)
+
+    objects = ProductImageManager()
 
     class Meta(BaseModel.Meta):
         ordering = ["-is_primary", "-created_at"]

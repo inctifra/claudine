@@ -13,10 +13,11 @@
 # limitations under the License.
 
 from django.urls import path
-from .views import create_vendor_store_view
+from .views import create_category_view, create_vendor_store_view
 
 app_name = "actions"
 
 urlpatterns = [
     path("create-store/", create_vendor_store_view, name="create_store_view"),
+    path("create-category/", create_category_view, name="create_category_view"),
 ]

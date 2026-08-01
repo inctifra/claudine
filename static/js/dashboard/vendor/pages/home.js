@@ -12,18 +12,12 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import "../../../sass/dashboard/vendor/index.scss";
 import $ from "jquery";
 
-$(async function(){
-    const [{ initDynamicDataTable }] = await Promise.all([
-        import("../../libs/_tableInitialize"),
-        import("./actions/create_store"),
-        import("./actions/create_category"),
-        import("./swiper/index"),
-    ]);
 
-
-
+$(async function () {
+  const [{ initDynamicDataTable }] = await Promise.all([
+    import("../../../libs/_tableInitialize"),
+  ]);
   initDynamicDataTable("table")
-});
+})

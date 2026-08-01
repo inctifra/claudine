@@ -7823,9 +7823,8 @@ div.dataTables_wrapper div.dataTables_paginate {
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   letter-spacing: 0.5px;
-  border-radius: 0;
-  -webkit-box-shadow: 1px 5px 24px 0 rgba(68, 102, 242, 0.05);
-  box-shadow: 1px 5px 24px 0 rgba(68, 102, 242, 0.05);
+  border-radius: 20px;
+ box-shadow: 0 1px 3px rgba(68, 102, 242, 0.04);
 }
 .card.card-load .card-loader {
   position: absolute;

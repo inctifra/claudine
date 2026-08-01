@@ -105,8 +105,8 @@ $(".sidebar-menu>li a").filter(function () {
 });
 
 // add active when dropdown links are active
-$(".sidebar-menu li").each(function (index) {
-  if ($(this).hasClass("active")) {
-    $(this).find(".sidebar-header").addClass("active")
-  }
-});
+// $(".sidebar-menu li").each(function (index) {
+//   if ($(this).hasClass("active")) {
+//     $(this).find(".sidebar-header").addClass("active")
+//   }
+// });

@@ -11,15 +11,20 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-from django.urls import path, include
+from django.urls import include
+from django.urls import path
 
-from .views import home, list_categories_view
+from .views import create_product_view, home
+from .views import list_categories_view
+from .views import list_products_view
 
 app_name = "vendor"
 
 urlpatterns = [
     path("", home, name="home"),
     path("categories/", list_categories_view, name="categories_list_view"),
+    path("products/", list_products_view, name="products_list_view"),
+    path("products/create/", create_product_view, name="create_product_view"),
     path(
         "actions/",
         include("apps.dashboard.vendor.actions.urls", namespace="actions"),

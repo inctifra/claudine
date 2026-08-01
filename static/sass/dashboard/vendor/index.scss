@@ -32,3 +32,16 @@
     margin-right: 2rem !important;
   }
 }
+
+.sidebar-menu {
+  li {
+    a {
+      transition: all 0.3s ease-in-out;
+      &.active ,
+      &:hover {
+        background-color: #ffffff14;
+        color: var(--theme-color) !important;
+      }
+    }
+  }
+}

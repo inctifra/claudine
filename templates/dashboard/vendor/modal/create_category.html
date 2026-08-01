@@ -1,0 +1,52 @@
+
+<div
+  class="modal fade"
+  id="createCategoryModal"
+  tabindex="-1"
+  aria-labelledby="createCategoryModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <form method="post"             action="{% url 'dashboard:vendor:actions:create_category_view' %}"
+ class="needs-validation" novalidate>
+        {% csrf_token %}
+        <div class="modal-header">
+          <h5 class="modal-title" id="createCategoryModalLabel">Add New Category</h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ><i data-feather="x"></i></button>
+        </div>
+        <div class="modal-body">
+          <div class="mb-3">
+                  <label class="form-label" for="{{ category_form.name.id_for_label }}">
+              {{ category_form.name.label }} <span class="text-danger">*</span>
+            </label>
+            {% render_field category_form.name %}
+            <div class="form-text text-muted">
+              This is how customers will see your category in the store.
+            </div>
+            <div class="invalid-feedback">Please provide a category name.</div>
+          </div>
+          <div class="mb-3">
+             <div class="d-flex align-items-center gap-2">
+                 {% render_field category_form.is_active|add_class:"p-3 checkbox-primary-2" %}
+            <label class="form-label mt-2" for="{{ category_form.is_active.id_for_label }}">
+              {{ category_form.is_active.label }}
+              </label>
+             </div>
+            <div class="form-text text-muted">
+              Inactive categories won't be visible to customers.
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-primary">Save Category</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

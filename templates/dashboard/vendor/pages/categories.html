@@ -6,29 +6,20 @@
 
 
 
-<!-- Container-fluid Ends -->
-
-<!-- Container-fluid starts -->
 <div class="container-fluid">
     {% include "dashboard/vendor/pages/components/header.html" with title='Categories <small>Manage your store categories</small>'  %}
     <div class="row">
         <div class="col-sm-12">
             <div class="card">
-                <div class="card-header">
-                    <form class="form-inline search-form search-box" method="get" action="">
-                        <div class="form-group">
-                            <input class="form-control-plaintext" type="search" name="q" placeholder="Search categories..." value="{{ request.GET.q }}">
-                        </div>
-                    </form>
-
-                    <button type="button" class="btn btn-primary mt-md-0 mt-2 d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#categoryModal">
+                <div class="card-header d-flex justify-content-end">
+                    <button type="button" class="btn btn-primary mt-md-0 mt-2 d-flex align-items-center" id="createCategoryModalButton">
                         <i data-feather="plus" class="mr-2"></i> Add Category
                     </button>
                 </div>
 
                 <div class="card-body">
-                    <div class="table-responsive table-desi">
-                        <table class="table all-package table-category">
+                    <div class="">
+                        <table class="">
                             <thead>
                                 <tr>
                                     <th>Name</th>
@@ -39,41 +30,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                {% for category in categories %}
-                                <tr>
-                                    <td data-field="name">
-                                        <strong>{{ category.name }}</strong>
-                                    </td>
-                                    <td data-field="products">
-                                        {{ category.product_count|default:"0" }}
-                                    </td>
-                                    <td data-field="status">
-                                        {% if category.is_active %}
-                                            <span class="badge badge-success">Active</span>
-                                        {% else %}
-                                            <span class="badge badge-secondary">Inactive</span>
-                                        {% endif %}
-                                    </td>
-                                    <td data-field="created">
-                                        {{ category.created_at|date:"M d, Y" }}
-                                    </td>
-                                    <td>
-                                        <a href="" class="mr-2" title="Edit">
-                                            <i class="fa fa-edit text-primary"></i>
-                                        </a>
-                                        <a href="" onclick="return confirm('Delete this category?');" title="Delete">
-                                            <i class="fa fa-trash text-danger"></i>
-                                        </a>
-                                    </td>
-                                </tr>
-                                {% empty %}
-                                <tr>
-                                    <td colspan="5" class="text-center text-muted py-5">
-                                        <i data-feather="inbox" class="mb-2" style="width: 40px; height: 40px;"></i>
-                                        <p>No categories found. Create your first category!</p>
-                                    </td>
-                                </tr>
-                                {% endfor %}
+                                {% include "dashboard/vendor/pages/components/category_tb_row.html" %}
                             </tbody>
                         </table>
                     </div>
@@ -82,49 +39,9 @@
         </div>
     </div>
 </div>
-<!-- Container-fluid Ends -->
 
-<!-- Add Category Modal -->
-<div class="modal fade" id="categoryModal" tabindex="-1" aria-labelledby="categoryModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <form method="post" action="" class="needs-validation" novalidate>
-                {% csrf_token %}
-                <div class="modal-header">
-                    <h5 class="modal-title" id="categoryModalLabel">Add New Category</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="mb-3">
-                        <label for="categoryName" class="form-label">
-                            <span class="text-danger">*</span> Category Name
-                        </label>
-                        <input type="text" class="form-control" id="categoryName" name="name" placeholder="e.g. Electronics, Clothing" required>
-                        <div class="form-text text-muted">
-                            This is how customers will see your category in the store.
-                        </div>
-                        <div class="invalid-feedback">
-                            Please provide a category name.
-                        </div>
-                    </div>
-                    <div class="mb-3">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="categoryActive" name="is_active" checked>
-                            <label class="form-check-label" for="categoryActive">
-                                Active
-                            </label>
-                        </div>
-                        <div class="form-text text-muted">
-                            Inactive categories won't be visible to customers.
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                    <button type="submit" class="btn btn-primary">Save Category</button>
-                </div>
-            </form>
-        </div>
-    </div>
-</div>
 {% endblock inner_body %}
+
+{% block modal %}
+{% include "dashboard/vendor/modal/create_category.html" %}
+{% endblock modal %}

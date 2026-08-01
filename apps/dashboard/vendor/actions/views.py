@@ -13,8 +13,12 @@
 # limitations under the License.
 from django.contrib.auth.decorators import login_required
 from django.http.response import JsonResponse
+from django.shortcuts import render
 from django.views.decorators.http import require_POST
 
+from apps.catalog.api.serializers import CategorySerializer
+from apps.catalog.forms import CategoryModelForm
+from apps.catalog.models import Category
 from apps.stores.api.serializers import StoreSerializer
 from apps.stores.forms import StoreModelForm
 
@@ -28,4 +32,20 @@ def create_vendor_store_view(request):
         instance = form.save()
         serializer = StoreSerializer(instance=instance, context={"request": request})
         return JsonResponse(serializer.data, status=201)
+    return JsonResponse(form.errors.as_json(), status=400)
+
+
+@login_required
+@require_POST
+def create_category_view(request):
+    form = CategoryModelForm(request.POST, store=request.user.store)
+    if form.is_valid():
+        form.save()
+        return render(
+            request,
+            "dashboard/vendor/pages/components/category_tb_row.html",
+            {
+                "categories": Category.objects.filter(store=request.user.store),
+            },
+        )
     return JsonResponse(form.errors.as_json(), status=400)

@@ -25,6 +25,7 @@ module.exports = {
     // dashboard related
     dashboard: path.resolve(__dirname, "../static/js/dashboard/index.js"),
     vendor: path.resolve(__dirname, "../static/js/dashboard/vendor/index.js"),
+    vendor_home: path.resolve(__dirname, "../static/js/dashboard/vendor/pages/home.js"),
   },
 
   output: {

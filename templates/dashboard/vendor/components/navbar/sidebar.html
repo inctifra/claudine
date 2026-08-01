@@ -4,7 +4,7 @@
 <div class="page-sidebar">
   <div class="main-header-left d-none d-lg-block">
     <div class="logo-wrapper">
-      <a href="{% url 'home' %}">
+      <a href="{% url 'home' %}" >
         <img class="d-none d-lg-block blur-up lazyloaded"
              src="{% webpack_static 'images/favicons/logo-white.png' %}"
              alt="" />
@@ -17,21 +17,15 @@
     </a>
     <ul class="sidebar-menu">
       <li class="mb-3">
-        <a class="sidebar-header" href="{% url 'home' %}">
+        <a class="sidebar-header {% if request.resolver_match.url_name == 'home' %}active{% endif %}" href="{% url 'home' %}">
           <i data-feather="grid"></i>
           <span>Dashboard</span>
         </a>
       </li>
       <li>
-        <a class="sidebar-header" href="#">
-          <i data-feather="shopping-bag"></i>
+        <a class="sidebar-header {% if request.resolver_match.url_name == 'dashboard:vendor:products_list_view' %}active{% endif %}" href="{% url 'dashboard:vendor:products_list_view' %}">
+          <i data-feather="shopping-bag" class="fs-4"></i>
           <span>Products</span>
-        </a>
-      </li>
-      <li>
-        <a class="sidebar-header" href="#">
-          <i data-feather="plus-circle"></i>
-          <span>Add Product</span>
         </a>
       </li>
       <li>

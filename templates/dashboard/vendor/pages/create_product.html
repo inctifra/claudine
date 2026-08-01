@@ -1,0 +1,108 @@
+
+
+{% extends "dashboard/vendor/base.html" %}
+
+{% block inner_body %}
+
+<div class="container-fluid">
+    <div class="page-header">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="page-header-left">
+                    <h3>{% if product %}Edit{% else %}Add{% endif %} Product
+                        <small>Manage your products</small>
+                    </h3>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <ol class="breadcrumb pull-right">
+                    <li class="breadcrumb-item">
+                        <a href=""><i data-feather="home"></i></a>
+                    </li>
+                    <li class="breadcrumb-item"><a href="">Products</a></li>
+                    <li class="breadcrumb-item active">{% if product %}Edit{% else %}Add{% endif %}</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <form method="post" action="" enctype="multipart/form-data" class="needs-validation" novalidate>
+        {% csrf_token %}
+        <div class="row product-adding">
+            <!-- Left Column -->
+            <div class="col-xl-6">
+                <div class="card">
+                    <div class="card-header"><h5>General</h5></div>
+                    <div class="card-body">
+                        {% for field in form %}
+                        <div class="form-group">
+                            <label for="{{ field.id_for_label }}" class="col-form-label">
+                                {% if field.field.required %}<span class="text-danger">*</span>{% endif %}
+                                {{ field.label }}
+                            </label>
+                            {{ field }}
+                            {% if field.help_text %}
+                            <small class="form-text text-muted">{{ field.help_text }}</small>
+                            {% endif %}
+                            {% if field.errors %}
+                            <div class="invalid-feedback d-block">{{ field.errors.0 }}</div>
+                            {% endif %}
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+
+                <!-- Images -->
+                <div class="card">
+                    <div class="card-header"><h5>Product Images</h5></div>
+                    <div class="card-body">
+                        {{ formset.management_form }}
+                        {% for image_form in formset %}
+                        <div class="form-group">
+                            <label>Image {{ forloop.counter }}</label>
+                            {{ image_form.image }}
+                            <div class="form-check mt-1">
+                                {{ image_form.is_primary }}
+                                <label class="form-check-label">Set as primary</label>
+                            </div>
+                            {% if image_form.instance.pk %}
+                            <div class="mt-2">
+                                {% comment %} <img src="{{ image_form.instance.image.url }}" style="height: 80px; object-fit: cover;">
+                                {{ image_form.DELETE }} <label>Delete</label> {% endcomment %}
+                            </div>
+                            {% endif %}
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column -->
+            <div class="col-xl-6">
+                <div class="card">
+                    <div class="card-header"><h5>Description</h5></div>
+                    <div class="card-body">
+                        <div class="form-group mb-0">
+                            {{ form.description }}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-body">
+                        <div class="product-buttons">
+                            <button type="submit" class="btn btn-primary">
+                                {% if product %}Update{% else %}Add{% endif %} Product
+                            </button>
+                            <a href="" class="btn btn-light">Cancel</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+{% endblock inner_body %}

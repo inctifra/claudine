@@ -72,7 +72,7 @@ dependencies = [
     "django-extensions==4.1",
     "django-coverage-plugin==3.1.1",
     "pytest-django==4.11.1",
-    "django-browser-reload>=1.20.0",
+    "django-browser-reload>=1.21.0",
     "pyjwt>=2.10.1",
     "djoser>=2.3.3",
     "djangorestframework-simplejwt>=5.5.1",
